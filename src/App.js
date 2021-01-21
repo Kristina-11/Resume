@@ -3,6 +3,7 @@ import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Nav from "./components/Nav";
+import PageNotFound from "./components/PageNotFound";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/portfolio' component={Portfolio} />
           <Route path='/work' component={Experience} />
           <Route path='/contact' component={Contact} />
+          <Route render={PageNotFound} />
         </Switch>
       </div>
     </BrowserRouter>
