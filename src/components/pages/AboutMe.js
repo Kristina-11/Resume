@@ -11,13 +11,30 @@ const AboutMe = () => {
         <div className="container">
             <Picture src={src} text='about' />
             { lang === 'en' ? 
-                <div className="info">
+                <div className="about">
                     <h1>Kristina Jovanovic</h1>
-                    <h2>Web developer</h2>
+                    <h2>Fullstack Web Developer</h2>
+                    <span>
+                        Patience
+                        &bull; Observation
+                        &bull; Deduction
+                        &bull; Perseverance
+                        &bull; Intuition
+                    </span>
+                    <div className="summary">
+                        
+                    </div>
                 </div> : 
-                <div className="info">
+                <div className="about">
                     <h1>Kristina Jovanović</h1>
-                    <h2>Web developer</h2>
+                    <h2>Fullstack Web Developer</h2>
+                    <span>
+                        Strpljenje
+                        &bull; Opservacija
+                        &bull; Dedukcija
+                        &bull; Istrajnost
+                        &bull; Intuicija
+                    </span>
                 </div>
             }
         </div>
