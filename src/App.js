@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import AboutMe from "./components/AboutMe";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
+import AboutMe from "./components/pages/AboutMe";
+import Contact from "./components/pages/Contact";
+import Experience from "./components/pages/Experience";
 import Nav from "./components/Nav";
-import PageNotFound from "./components/PageNotFound";
-import Portfolio from "./components/Portfolio";
-import Skills from "./components/Skills";
+import PageNotFound from "./components/pages/PageNotFound";
+import Portfolio from "./components/pages/Portfolio";
+import Skills from "./components/pages/Skills";
 
 function App() {
   return (
