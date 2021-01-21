@@ -3,7 +3,7 @@ import src from '../../img/skills.jpg';
 
 const Skills = () => {
     return ( 
-        <div className="skills">
+        <div className="container">
             <Picture src={src} text='skills' />
         </div>
      );

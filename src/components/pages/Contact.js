@@ -3,7 +3,7 @@ import Picture from '../reusable/Picture';
 
 const Contact = () => {
     return ( 
-        <div className="contact">
+        <div className="container">
             <Picture src={src} text='contact' />
         </div>
      );

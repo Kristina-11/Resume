@@ -3,7 +3,7 @@ import src from '../../img/portfolio.jpg';
 
 const Portfolio = () => {
     return ( 
-        <div className="portfolio">
+        <div className="container">
             <Picture src={src} text='portfolio' />
         </div>
      );
