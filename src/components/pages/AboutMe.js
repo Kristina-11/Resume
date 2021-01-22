@@ -8,7 +8,6 @@ import resume from '../../pdf/Resume.pdf';
 
 const AboutMe = () => { 
     const { lang } = useContext(LanguageContext);
-    console.log(lang)
 
     return (
         <div className="container">
@@ -25,8 +24,12 @@ const AboutMe = () => {
                         &bull; Intuition
                     </span>
                     <div className="summary">
-                        <p>Motivated web developer with a year of experience with .NET framework and many moons experience as a freelancer. Diagnosed and solved some issues ( technical and personal :D), built a few websites as well as small projects.</p>
-                        <p>Determined to constantly learn and develop.</p>
+                        Motivated web developer with a year of experience with .NET framework
+                        and many moons experience as a freelancer.
+                        Diagnosed and solved some issues ( technical and personal :D),
+                        built a few websites as well as small projects. <br/>
+                        Open for work in office, remote or freelance. <br/>
+                        Determined to constantly learn and develop.
                     </div>
                     <div className="links">
                         <div className="links-text">
@@ -44,7 +47,7 @@ const AboutMe = () => {
                         </div>
                         <div className="resume">
                             <a href={resume} target="_blank">Resume</a>
-                            <p>PDF version resume</p>
+                            <p>PDF Resume</p>
                         </div>
                     </div>
                 </div> : 
@@ -59,8 +62,31 @@ const AboutMe = () => {
                         &bull; Intuicija
                     </span>
                     <div className="summary">
-                        <p>Motivated web developer with a year of experience with .NET framework and many moons experience as a freelancer. Diagnosed and solved some issues ( technical and personal :D), built a few websites as well as small projects.</p>
-                        <p>Determined to constantly learn and develop.</p>
+                        Motivisani web developer sa jednogodišnjim iskustvom
+                        u .NET-u i višemesečno iskustvo kao frilenser.
+                        Dijagnostikovala i rešila probleme ( tehničke i lične :D ),
+                        napravila nekoliko web sajtova kao i malih projekata. <br/>
+                        Otvorena za rad u firmi, na daljinu kao i frilens. <br/>
+                        Spremna na konstantno učenje i usavršavanje.
+                    </div>
+                    <div className="links">
+                        <div className="links-text">
+                            Potreban Vam je web developer? Možete me kontaktirati preko mejla ili LinkedIn profila:
+                        </div>
+                        <div className="email">
+                            <img src={email} width='20px' alt='email icon' />
+                            <span>kristina.jovanovic.code@gmail.com</span>
+                        </div>
+                        <div className="linked-in">
+                            <a href='www.linkedin.com/in/kristina91jovanovic11'>
+                                <img src={linkedIn} width='20px' alt='linkedIn icon' />
+                            </a>
+                            <span>www.linkedin.com/in/kristina91jovanovic11</span>
+                        </div>
+                        <div className="resume">
+                            <a href={resume} target="_blank">Resume</a>
+                            <p>PDF Rezime</p>
+                        </div>
                     </div>
                 </div>
             }
