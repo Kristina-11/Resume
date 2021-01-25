@@ -6,7 +6,7 @@ const LanguageContextProvider = (props) => {
     const [lang, setLang] = useState('en');
 
     const changeLanguage = (chosenLang) => {
-        chosenLang != 'en' ? setLang('sr') : setLang('en');
+        chosenLang !== 'en' ? setLang('sr') : setLang('en');
     }
 
     return ( 

@@ -7,6 +7,7 @@ import PageNotFound from "./components/pages/PageNotFound";
 import Portfolio from "./components/pages/Portfolio";
 import Skills from "./components/pages/Skills";
 import LanguageContextProvider from "./context/LanguageContext";
+import Interests from "./components/pages/Interests";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
             <Route path='/portfolio' component={Portfolio} />
             <Route path='/work' component={Experience} />
             <Route path='/contact' component={Contact} />
-            <Route render={PageNotFound} />
+            <Route path='/interests' component={Interests} />
+            <Route path='*' render={PageNotFound} />
           </Switch>
         </div>
       </BrowserRouter>

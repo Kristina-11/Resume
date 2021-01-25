@@ -24,8 +24,12 @@ const Picture = ({ src, text }) => {
             case 'contact': 
             setAlt('Contact me funny picture web development technology');
             break;
+
+            case 'interests': 
+            setAlt('Interests picture web development technology');
+            break;
         }
-    }, [alt])
+    }, [text])
 
     return ( 
         <div className="pic">

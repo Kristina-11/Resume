@@ -11,7 +11,7 @@ const AboutMe = () => {
         id: 1,
         name: 'Kristina Jovanovic',
         position: 'Fullstack Web Developer',
-        keywords: ['Patience', 'Observation', 'Deduction', 'Perseverance', 'Intuition'],
+        keywords: ['Patience', 'Observation', 'Deduction', 'Perseverance', 'Organization'],
         summary: 'Motivated web developer with a year of experience with .NET framework and many moons experience as a freelancer. Diagnosed and solved some issues ( technical and personal :D), built a few websites as well as small projects. Open for work in office, remote or freelance. Determined to constantly learn and develop.',
         text: 'If you are in need of web developer you can contact me via Email or LinkedIn:',
     });
@@ -20,7 +20,7 @@ const AboutMe = () => {
         id: 2,
         name: 'Kristina Jovanović',
         position: 'Fullstack Web Developer',
-        keywords: ['Strpljenje', 'Opservacija', 'Dedukcija', 'Istrajnost', 'Intuicija'],
+        keywords: ['Strpljenje', 'Opservacija', 'Dedukcija', 'Istrajnost', 'Organizacija'],
         summary: 'Motivisani web developer sa jednogodišnjim iskustvom u .NET-u i višemesečno iskustvo kao frilenser. Dijagnostikovala i rešila probleme ( tehničke i lične :D ), napravila nekoliko web sajtova kao i malih projekata. Otvorena za rad u firmi, na daljinu kao i frilens. Spremna na konstantno učenje i usavršavanje.',
         text: 'Potreban Vam je web developer? Možete me kontaktirati preko mejla ili LinkedIn profila:',
     })
