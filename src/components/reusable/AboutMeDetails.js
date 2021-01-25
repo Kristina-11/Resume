@@ -5,7 +5,6 @@ import resumeEn from '../../pdf/Resume.pdf';
 import resumeSr from '../../pdf/ResumeSr.pdf';
 
 const AboutMeDetails = ({ about }) => {
-    console.log(about)
     const keywordsList = about.keywords;
     
     return (
