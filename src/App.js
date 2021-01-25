@@ -22,7 +22,7 @@ function App() {
             <Route path='/work' component={Experience} />
             <Route path='/contact' component={Contact} />
             <Route path='/interests' component={Interests} />
-            <Route path='*' render={PageNotFound} />
+            <Route path='*' component={PageNotFound} />
           </Switch>
         </div>
       </BrowserRouter>

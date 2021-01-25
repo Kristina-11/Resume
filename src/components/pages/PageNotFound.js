@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { LanguageContext } from '../../context/LanguageContext';
 
 export default function PageNotFound() {
+    const { lang } = useContext(LanguageContext);
+
     return (
         <div className='page-not-found'>
-            <h1>Page doesn't exists!</h1>
+            {
+                lang === 'en' ? 
+                    <h1>Page doesn't exists!</h1>
+                    :
+                    <h1>Strana ne postoji!</h1>
+            }
         </div>
     )
 }
