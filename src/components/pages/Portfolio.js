@@ -10,10 +10,10 @@ const Portfolio = () => {
     const { lang } = useContext(LanguageContext);
 
     const [ links ] = useState([
-        { name: 'blog', details: 'Made with C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/' },
-        { name: 'managment', details: 'Made with React.js & Firebase', link: 'https://projectmanagment-28660.web.app/'},
-        { name: 'weather', details: 'Made with React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/'},
-        { name: 'dimitrijala', details: 'Made with CMS', link: 'https://www.dimitrijatucovica30.co.rs/'}
+        { name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/' },
+        { name: 'managment', details: 'React.js & Firebase', link: 'https://projectmanagment-28660.web.app/'},
+        { name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/'},
+        { name: 'dimitrijala', details: 'CMS', link: 'https://www.dimitrijatucovica30.co.rs/'}
     ]);
 
     return ( 
