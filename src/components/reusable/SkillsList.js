@@ -1,5 +1,5 @@
-const SkillsList = (props) => {
-    console.log(props)
+const SkillsList = ({ tech, tools, org, language, lang }) => {
+    console.log(language)
     const mapSkills = (skills) => {
         let list = skills.map((skill) => {
             return (
@@ -12,42 +12,40 @@ const SkillsList = (props) => {
 
     return ( 
         <div className="skills">
-            {/* <div className="tech">
-                <h1>Technical skills</h1>
+            <div className="tech">
+                <h1>{ lang.technical }</h1>
                 <ul>
                     <h3>Frontend</h3>
-                    <SkillsList skills={techSkills.frontend} />
+                    { mapSkills(tech.frontend) }
 
                     <h3>Backend</h3>
-                    <SkillsList skills={techSkills.backend} />
+                    { mapSkills(tech.backend) }
                     
                     <h3>Servers</h3>
-                    <SkillsList skills={techSkills.servers} />
+                    { mapSkills(tech.servers) } 
                 </ul>
             </div>
             <div className="tools">
-                <h1>Tools</h1>
+                <h1>{ lang.usedTools }</h1>
                 <ul>
-                    <SkillsList skills={tools.collab} />
+                    { mapSkills(tools.collab) }
 
                     <h3>Editors</h3>
-                    <SkillsList skills={tools.editors} />
+                    { mapSkills(tools.editors) }
                 </ul>
             </div>
             <div className="soft">
-                <h1>Management skills</h1>
+                <h1>{ lang.menagment }</h1>
                 <ul>
-                    <li>Agile methodologies - SCRUM</li>
-                    <li>Jira</li>
+                    { mapSkills(org.org) }
                 </ul>
             </div>
             <div className="lang">
-                <h1>Language</h1>
+                <h1>{ lang.language }</h1>
                 <ul>
-                    <li>Serbian - Native</li>
-                    <li>English - Advanced</li>
+                    { mapSkills(language) }
                 </ul>
-            </div> */}
+            </div>
         </div>
      );
 }

@@ -8,7 +8,7 @@ const Skills = () => {
     const { lang } = useContext(LanguageContext);
 
     const [ techSkills ] = useState({
-        frontend: ['HTML5&CSS3', 'JavaScript - React.js'],
+        frontend: ['HTML5&CSS3', 'JavaScript', 'React.js'],
         backend: ['C# - .NET, .NET Core'],
         servers: ['MSSQL Server', 'Firebase']
     });
@@ -22,31 +22,33 @@ const Skills = () => {
         org: ['Agile methodologies - SCRUM', 'Jira']
     });
 
-    const [ speaking ] = useState({
-        lan: ['Serbian - Native', 'English - Advanced']
+    const [ language ] = useState({
+        lan: ['Serbian - Native', 'English - Advanced'],
+        lanSr: ['Srpski - Maternji', 'Engleski - Napredni']
+    });
+
+    const [ titles ] = useState({
+        en: {
+            technical: 'Technical skills',
+            usedTools: 'Tools',
+            menagment: 'Management skills',
+            language: 'Language'
+        },
+        sr: {
+            technical: 'Tehničke veštine',
+            usedTools: 'Alati',
+            menagment: 'Organizacija',
+            language: 'Jezik'
+        }
     });
 
     return ( 
         <div className="container">
             <Picture src={src} text='skills' />
             { lang === 'en' ? 
-                <SkillsList tech={techSkills} tools={tools} org={org} speaking={speaking} lang={lang} />
+                <SkillsList tech={techSkills} tools={tools} org={org} language={language.lan} lang={titles.en} />
             :
-                <div className="skills">
-                    <div className="tech">
-                        <h1>Tehničke veštine</h1>
-                        
-                    </div>
-                    <div className="soft">
-                        <h1>Menadzment</h1>
-                    </div>
-                    <div className="tools">
-                        <h1>Alati</h1>
-                    </div>
-                    <div className="lang">
-                        <h1>Jezik</h1>
-                    </div>
-                </div>
+                <SkillsList tech={techSkills} tools={tools} org={org} language={language.lanSr} lang={titles.sr} />
             }
         </div>
      );
