@@ -1,15 +1,20 @@
 import Picture from "../reusable/Picture";
 import src from '../../img/portfolio.jpg';
-import blog from '../../img/projects/blog.PNG';
-import managment from '../../img/projects/managment.PNG';
-import weather from '../../img/projects/weather.PNG';
-import dimitrijala from '../../img/projects/dimitrijala.PNG';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
 import github from '../../img/github.png';
+import ProjectDetails from "../reusable/ProjectDetails";
 
+// Add tooltip for info about sites that require login details
 const Portfolio = () => {
     const { lang } = useContext(LanguageContext);
+
+    const [ links ] = useState([
+        { name: 'blog', details: 'Made with C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/' },
+        { name: 'managment', details: 'Made with React.js & Firebase', link: 'https://projectmanagment-28660.web.app/'},
+        { name: 'weather', details: 'Made with React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/'},
+        { name: 'dimitrijala', details: 'Made with CMS', link: 'https://www.dimitrijatucovica30.co.rs/'}
+    ]);
 
     return ( 
         <div className="container">
@@ -19,7 +24,7 @@ const Portfolio = () => {
                     <div className="portfolio">
                         <h1>Projects</h1>
                         <div className="summary">
-                            All the code of my projects can be found on my GitHub account.  <br/>
+                            All the code of my projects can be found on my GitHub account. <br/>
                         </div>
                     </div> :
                     <div className="portfolio">
@@ -35,54 +40,11 @@ const Portfolio = () => {
                 </a> 
             </div>
             <span className="projects">
-                <div className="project">
-                    <a href='http://kristina91119-001-site1.itempurl.com/' target='_blank'>
-                        <Picture src={blog} />
-                    </a>
-                    <div className="project-details">
-                        Made with C# - .NET Core 
-                        <div className="project-details-more">
-                            For testing site use credidentals: <br/>
-                            ADMIN: admin, password <br/>
-                            USER: testing@test, testing <br/>
-
-                            <i>Or feel free to registar and test that part, it does not include activation link.</i>
-                        </div> 
-                    </div>                
-                </div>
-
-                <div className="project">
-                    <a href='https://projectmanagment-28660.web.app/' target='_blank'>
-                        <Picture src={managment} />
-                    </a>
-                    <div className="project-details">
-                        Made with React.js & Firebase
-                        <div className="project-details-more">
-                        You can test it as a user: <br/>
-                        - kakashi@test.com <br/>
-                        - testing12345 <br/>
-                        <b>NOTE: Only logged in users can see all projects.</b> 
-                        </div> 
-                    </div>                
-                </div>
-
-                <div className="project">
-                    <a href='https://kristina-11.github.io/WeatherApp/' target='_blank'>
-                        <Picture src={weather} />
-                    </a>
-                    <div className="project-details">
-                        Made with React.js & WeatherApp API
-                    </div>                
-                </div>
-
-                <div className="project">
-                    <a href='https://www.dimitrijatucovica30.co.rs/' target='_blank'>
-                        <Picture src={dimitrijala} />
-                    </a>
-                    <div className="project-details">
-                        Made with CMS
-                    </div>                
-                </div>
+                {
+                    links && links.map((link) => {
+                        return <ProjectDetails info={link} key={Math.random() * 10} />
+                    })
+                }
             </span>
         </div>
      );
