@@ -1,5 +1,4 @@
 const SkillsList = ({ tech, tools, org, language, lang }) => {
-    console.log(language)
     const mapSkills = (skills) => {
         let list = skills.map((skill) => {
             return (

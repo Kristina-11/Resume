@@ -31,7 +31,7 @@ const Skills = () => {
         en: {
             technical: 'Technical skills',
             usedTools: 'Tools',
-            menagment: 'Management skills',
+            menagment: 'Soft skills',
             language: 'Language'
         },
         sr: {
