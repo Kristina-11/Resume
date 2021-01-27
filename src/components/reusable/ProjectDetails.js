@@ -3,6 +3,10 @@ import blog from '../../img/projects/blog.PNG';
 import managment from '../../img/projects/managment.PNG';
 import weather from '../../img/projects/weather.PNG';
 import dimitrijala from '../../img/projects/dimitrijala.PNG';
+import library from '../../img/projects/library.PNG';
+import calculator from '../../img/projects/calculator.PNG';
+import gameRPS from '../../img/projects/game-rps.PNG';
+import planets from '../../img/projects/planets.PNG';
 import { useEffect, useState } from "react";
 
 const ProjectDetails = ({ info }) => {
@@ -24,6 +28,22 @@ const ProjectDetails = ({ info }) => {
 
             case 'dimitrijala':
                 setPic(dimitrijala);
+                break;
+
+            case 'library':
+                setPic(library);
+                break;
+
+            case 'planets':
+                setPic(planets);
+                break;
+            
+            case 'gameRPS':
+                setPic(gameRPS);
+                break;
+            
+            case 'calculator':
+                setPic(calculator);
                 break;
         }
     }, [info])

@@ -13,7 +13,11 @@ const Portfolio = () => {
         { name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/' },
         { name: 'managment', details: 'React.js & Firebase', link: 'https://projectmanagment-28660.web.app/'},
         { name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/'},
-        { name: 'dimitrijala', details: 'CMS', link: 'https://www.dimitrijatucovica30.co.rs/'}
+        { name: 'dimitrijala', details: 'CMS - Google Sites', link: 'https://www.dimitrijatucovica30.co.rs/'},
+        { name: 'library', details: 'Vanilla JavaScript + LocalStorage', link: 'https://kristina-11.github.io/Library/'},
+        { name: 'planets', details: 'Vanilla JavaScript', link: 'https://kristina-11.github.io/WeightInUniverse/'},
+        { name: 'gameRPS', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Rock-Paper-Scissors/'},
+        { name: 'calculator', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Calculator/'},
     ]);
 
     return ( 
