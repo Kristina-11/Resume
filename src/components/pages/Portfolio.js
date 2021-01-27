@@ -29,16 +29,20 @@ const Portfolio = () => {
                         <h1>Projects</h1>
                         <div className="summary">
                             All the code of my projects can be found on my GitHub account. <br/>
+                            There you will also find documentation for projects. <br/>
+                            Projects can be viewed by clicking icon below.
                         </div>
                     </div> :
                     <div className="portfolio">
                         <h1>Projekti</h1>
                         <div className="summary">
                             Kod svih projekata možete pogledati na mom GitHub profilu.  <br/>
+                            Tamo ćete naći i dokumentaciju projekata. <br/>
+                            Projekte možete pogledati klikom na sliku ispod.
                         </div>
                     </div>
             }
-            <div className="links">
+            <div className="links github">
                 <a href='https://github.com/Kristina-11?tab=projects'>
                     <img src={github} width='30px' alt='github icon' />
                 </a> 

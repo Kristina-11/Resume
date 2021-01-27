@@ -1,6 +1,7 @@
 import React from 'react'
 import email from '../../img/email.svg';
 import linkedIn from '../../img/linedin.png';
+import github from '../../img/github.png';
 import resumeEn from '../../pdf/Resume.pdf';
 import resumeSr from '../../pdf/ResumeSr.pdf';
 
@@ -36,6 +37,12 @@ const AboutMeDetails = ({ about }) => {
                         <img src={linkedIn} width='20px' alt='linkedIn icon' />
                     </a>
                     <span>www.linkedin.com/in/kristina91jovanovic11</span>
+                </div>
+                <div className="github">
+                    <a href='https://github.com/Kristina-11/'>
+                        <img src={github} width='20px' alt='github icon' />
+                    </a> 
+                    <span>https://github.com/Kristina-11/</span>
                 </div>
                 <div className="resume">
                     { about.id === 1 ? 
