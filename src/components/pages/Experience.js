@@ -13,6 +13,7 @@ const Experience = () => {
         titlePlans: 'Plans for the future',
         titleCourses: 'Courses:',
         titleBooks: 'Books to read:',
+        titleProgress: 'In progress',
         experience: [{ 
             date: '2020', 
             title: 'Freelance Web Developer', 
@@ -38,7 +39,8 @@ const Experience = () => {
         future: {
             courses: ['Node.js'],
             books: ['Clean Architecture by Robert C. Martin']
-        }
+        },
+        progress: ['Modern React Tutorial']
     });
 
     const [ iskustvo ] = useState({
@@ -47,6 +49,7 @@ const Experience = () => {
         titlePlans: 'Planovi za budućnost',
         titleCourses: 'Kursevi:',
         titleBooks: 'Knjige:',
+        titleProgress: 'Trenutno radim',
         experience: [{ 
             date: '2020', 
             title: 'Freelance Web Developer', 
@@ -72,7 +75,8 @@ const Experience = () => {
         future: {
             courses: ['Node.js'],
             books: ['Čista Arhitektura - Robert C. Martin']
-        }
+        },
+        progress: ['Modern React Tutorial']
     });
 
     return ( 

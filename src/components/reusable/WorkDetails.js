@@ -52,6 +52,17 @@ const WorkDetails = ({ props }) => {
                     }
                 </ul>
             </div>
+
+            <div className="progress">
+                <h2>{ props.titleProgress }</h2>
+                <ul>
+                {
+                    props.progress.map((item) => {
+                        return ( <li key={Math.random() * 10}>{ item }</li> )
+                    })
+                }
+                </ul>
+            </div>
         </div>
     );
 }
