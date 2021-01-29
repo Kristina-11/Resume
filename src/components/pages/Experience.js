@@ -37,10 +37,10 @@ const Experience = () => {
             years: '2006 - 2010'
         }],
         future: {
-            courses: ['Node.js'],
+            courses: ['Node.js', 'Next.js', 'Vue.js'],
             books: ['Clean Architecture by Robert C. Martin']
         },
-        progress: ['Modern React Tutorial']
+        progress: ['Modern React Tutorial', 'Materialize.css', 'Framer Motion']
     });
 
     const [ iskustvo ] = useState({
@@ -73,10 +73,10 @@ const Experience = () => {
             years: '2006 - 2010'
         }],
         future: {
-            courses: ['Node.js'],
+            courses: ['Node.js', 'Next.js', 'Vue.js'],
             books: ['Čista Arhitektura - Robert C. Martin']
         },
-        progress: ['Modern React Tutorial']
+        progress: ['Modern React Tutorial', 'Materialize.css', 'Framer Motion']
     });
 
     return ( 
