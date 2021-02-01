@@ -12,7 +12,7 @@ const AboutMe = () => {
         name: 'Kristina Jovanovic',
         position: 'Fullstack Web Developer',
         keywords: ['Patience', 'Observation', 'Deduction', 'Perseverance', 'Organization'],
-        summary: 'Motivated web developer with a year of experience with .NET framework and many moons experience as a freelancer. Diagnosed and solved some issues ( technical and personal :D), built a few websites as well as small projects. Open for work in office, remote or freelance. Determined to constantly learn and develop.',
+        summary: 'Motivated web developer with a year of experience with .NET framework and many months experience as a freelancer. Diagnosed and solved some issues ( technical and personal :D), built a few websites as well as small projects. Open for work in office, remote or freelance. Determined to constantly learn and develop.',
         text: 'If you are in need of web developer you can contact me via Email or LinkedIn:',
     });
 

@@ -1,5 +1,5 @@
 import Picture from "../reusable/Picture";
-import src from '../../img/interests.jpg';
+import src from '../../img/interests.jpeg';
 
 const Interests = () => {
     return ( 

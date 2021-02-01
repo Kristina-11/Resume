@@ -13,7 +13,6 @@ const Nav = () => {
                     <Link to='/skills'>Skills</Link>
                     <Link to='/portfolio'>Portfolio</Link>
                     <Link to='/work'>Experience&Education</Link>
-                    <Link to='/contact'>Contact</Link>
                     <Link to='/interests'>Interests</Link>
                 </div> : 
                 <div className="nav-left">
@@ -21,7 +20,6 @@ const Nav = () => {
                     <Link to='/skills'>Veštine</Link>
                     <Link to='/portfolio'>Portfolio</Link>
                     <Link to='/work'>Iskustvo&Edukacija</Link>
-                    <Link to='/contact'>Kontakt</Link>
                     <Link to='/interests'>Interesovanja</Link>
                 </div>
             }

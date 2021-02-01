@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AboutMe from "./components/pages/AboutMe";
-import Contact from "./components/pages/Contact";
 import Experience from "./components/pages/Experience";
 import Nav from "./components/Nav";
 import PageNotFound from "./components/pages/PageNotFound";
@@ -20,7 +19,6 @@ function App() {
             <Route path='/skills' component={Skills} />
             <Route path='/portfolio' component={Portfolio} />
             <Route path='/work' component={Experience} />
-            <Route path='/contact' component={Contact} />
             <Route path='/interests' component={Interests} />
             <Route path='*' component={PageNotFound} />
           </Switch>
