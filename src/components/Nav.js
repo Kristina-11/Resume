@@ -13,6 +13,7 @@ const Nav = () => {
         setDropdown(!dropdown);
     }
 
+    // Effect that tracks changes for dropdown menu
     useEffect(() => {
         const dropdownElement = document.querySelector('.nav-left');
 

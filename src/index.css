@@ -59,14 +59,16 @@
   display: none;
 }
 
+.active-lang {
+  font-weight: bolder;
+  background-color: aqua;
+}
+
+
 .nav-right {
   grid-column: 2;
   grid-row: 1;
   padding: 1.5rem;
-}
-
-.nav-right ul {
-  background-color: chartreuse;
 }
 
 .nav-right ul li{
@@ -75,7 +77,27 @@
   padding: 5px;
 }
 
+
 /* Small devices */
 @media only screen and (min-width: 600px) {
+  .nav-dropdown {
+    display: none;
+  }
 
+  .nav-left {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+    box-shadow: none;
+    background-color: transparent; 
+    padding: 1.5rem;
+  }
+
+  .nav-left a{
+    display: inline;
+  }
+  
+  .nav-hide {
+    display: block;
+  }
 }
