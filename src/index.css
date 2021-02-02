@@ -31,7 +31,7 @@
 }
 
 .nav-dropdown img {
-  width: 40px;
+  width: 50px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -64,6 +64,10 @@
   background-color: aqua;
 }
 
+.inactive-lang {
+  font-weight: 100;
+  background-color: antiquewhite;
+}
 
 .nav-right {
   grid-column: 2;
@@ -76,7 +80,6 @@
   display: inline;
   padding: 5px;
 }
-
 
 /* Small devices */
 @media only screen and (min-width: 600px) {

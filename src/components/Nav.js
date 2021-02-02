@@ -13,6 +13,17 @@ const Nav = () => {
         setDropdown(!dropdown);
     }
 
+    const handleLanguageChange = (e) => {
+        if (e.target.innerText === 'EN') {
+            changeLanguage('sr')
+            e.target.innerText = 'SR'
+        } else {
+            changeLanguage('en')
+            e.target.innerText = 'EN'
+        }
+    }
+
+
     // Effect that tracks changes for dropdown menu
     useEffect(() => {
         const dropdownElement = document.querySelector('.nav-left');
@@ -57,8 +68,8 @@ const Nav = () => {
             
             <div className="nav-right">
                 <ul>
-                    <li onClick={() => changeLanguage('en')}>EN</li>
-                    <li onClick={() => changeLanguage('sr')}>SR</li>
+                    <li className='active-lang' onClick={handleLanguageChange}>EN</li>
+                    {/* <li className='inactive-lang' onClick={handleLanguageChange}>SR</li> */}
                 </ul>
             </div>
         </div>
