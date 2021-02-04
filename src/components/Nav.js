@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { LanguageContext } from "../context/LanguageContext";
 
 import dropdownImg from "../img/dropdown.png";
@@ -23,7 +23,6 @@ const Nav = () => {
         }
     }
 
-
     // Effect that tracks changes for dropdown menu
     useEffect(() => {
         const dropdownElement = document.querySelector('.nav-left');
@@ -41,7 +40,6 @@ const Nav = () => {
                 setDropdown(false)
             }
         }
-
     },[dropdown])
 
     return ( 
@@ -51,25 +49,24 @@ const Nav = () => {
             </div>
             { lang === 'en' ? 
                 <div className="nav-left nav-hide">
-                    <Link to='/'>About</Link>
-                    <Link to='/skills'>Skills</Link>
-                    <Link to='/portfolio'>Portfolio</Link>
-                    <Link to='/work'>Experience&Education</Link>
-                    <Link to='/interests'>Interests</Link>
+                    <NavLink exact to='/' activeClassName='focused'>About</NavLink>
+                    <NavLink to='/skills' activeClassName='focused'>Skills</NavLink>
+                    <NavLink to='/portfolio' activeClassName='focused'>Portfolio</NavLink>
+                    <NavLink to='/work' activeClassName='focused'>Experience&Education</NavLink>
+                    <NavLink to='/interests' activeClassName='focused'>Interests</NavLink>
                 </div> : 
                 <div className="nav-left nav-hide">
-                    <Link to='/'>Info</Link>
-                    <Link to='/skills'>Veštine</Link>
-                    <Link to='/portfolio'>Portfolio</Link>
-                    <Link to='/work'>Iskustvo&Edukacija</Link>
-                    <Link to='/interests'>Interesovanja</Link>
+                    <NavLink exact to='/' activeClassName='focused'>Info</NavLink>
+                    <NavLink to='/skills' activeClassName='focused'>Veštine</NavLink>
+                    <NavLink to='/portfolio' activeClassName='focused'>Portfolio</NavLink>
+                    <NavLink to='/work' activeClassName='focused'>Iskustvo&Edukacija</NavLink>
+                    <NavLink to='/interests' activeClassName='focused'>Interesovanja</NavLink>
                 </div>
             }
             
             <div className="nav-right">
                 <ul>
                     <li className='active-lang' onClick={handleLanguageChange}>EN</li>
-                    {/* <li className='inactive-lang' onClick={handleLanguageChange}>SR</li> */}
                 </ul>
             </div>
         </div>
