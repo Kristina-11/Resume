@@ -1,5 +1,5 @@
 import React from 'react'
-import email from '../../img/email.svg';
+import email from '../../img/email.png';
 import linkedIn from '../../img/linedin.png';
 import github from '../../img/github.png';
 import resumeEn from '../../pdf/Resume.pdf';
@@ -31,29 +31,28 @@ const AboutMeDetails = ({ about }) => {
                     { about.text }
                 </div>
                 <div className="email">
-                    <img src={email} width='20px' alt='email icon' />
-                    <span>kristina.jovanovic.code@gmail.com</span>
+                    <a href='kristina.jovanovic.code@gmail.com' onClick={() => window.open('mailto:kristina.jovanovic.code@gmail.com')}>
+                        <img src={email} alt='email icon' />
+                    </a>
                 </div>
                 <div className="linked-in">
-                    <a href='www.linkedin.com/in/kristina91jovanovic11'>
-                        <img src={linkedIn} width='20px' alt='linkedIn icon' />
+                    <a href='https://www.linkedin.com/in/kristina91jovanovic11'>
+                        <img src={linkedIn} alt='linkedIn icon' />
                     </a>
-                    <span>www.linkedin.com/in/kristina91jovanovic11</span>
+                    {/* <span>www.linkedin.com/in/kristina91jovanovic11</span> */}
                 </div>
                 <div className="github">
                     <a href='https://github.com/Kristina-11/'>
-                        <img src={github} width='20px' alt='github icon' />
+                        <img src={github} alt='github icon' />
                     </a> 
-                    <span>https://github.com/Kristina-11/</span>
+                    {/* <span>https://github.com/Kristina-11/</span> */}
                 </div>
                 <div className="resume">
                     { about.id === 1 ? 
                         <a href={resumeEn} target="_blank">Resume</a> 
                         :
                         <a href={resumeSr} target="_blank">Resume</a> 
-                    }
-
-                    <p>PDF Resume</p>
+                    } (PDF)
                 </div>
             </div>
         </div>
