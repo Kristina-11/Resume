@@ -44,7 +44,7 @@ const Skills = () => {
 
     return ( 
         <div className="container">
-            <Picture src={src} text='skills' />
+            <Picture src={src} text='skills' from='main'/>
             { lang === 'en' ? 
                 <SkillsList tech={techSkills} tools={tools} org={org} language={language.lan} lang={titles.en} />
             :

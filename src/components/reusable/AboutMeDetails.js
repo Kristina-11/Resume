@@ -10,17 +10,19 @@ const AboutMeDetails = ({ about }) => {
     
     return (
         <div className="about">
-            <h1>{ about.name }</h1>
-            <h2>{ about.position }</h2>
-            <span>
-                <ul>
-                    { keywordsList.map((keyword) => {
-                        return (
-                            <li key={Math.random() * 10}>{ keyword }</li>
-                        )
-                    }) }
-                </ul>
-            </span>
+            <div className="intro">
+                <h1>{ about.name }</h1>
+                <h2>{ about.position }</h2>
+                <span>
+                    <ul>
+                        { keywordsList.map((keyword) => {
+                            return (
+                                <li key={Math.random() * 10}>{ keyword }</li>
+                            )
+                        }) }
+                    </ul>
+                </span>
+            </div>
             <div className="summary">
                 { about.summary }
             </div>

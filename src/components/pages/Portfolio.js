@@ -22,7 +22,7 @@ const Portfolio = () => {
 
     return ( 
         <div className="container">
-            <Picture src={src} text='portfolio' />
+            <Picture src={src} text='portfolio' from='main'/>
             {
                 lang === 'en' ?
                     <div className="portfolio">

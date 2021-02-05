@@ -51,7 +51,7 @@ const ProjectDetails = ({ info }) => {
     return ( 
         <div className="project">
             <a href={info.link} target='_blank'>
-                <Picture src={pic} />
+                <Picture src={pic} from='projects' />
             </a>
             <div className="project-details">
                 { info.details }

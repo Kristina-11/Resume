@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-const Picture = ({ src, text }) => {
+const Picture = ({ src, text, from }) => {
     const [ alt, setAlt ] = useState('');
+    const [ style, setStyle ] = useState('');
 
     useEffect(() => {
         switch(text) {
@@ -29,13 +30,22 @@ const Picture = ({ src, text }) => {
             setAlt('Interests picture web development technology');
             break;
         }
-    }, [text])
+
+        switch(from) {
+            case 'main':
+            setStyle('main-pic');
+            break;
+
+            case 'projects':
+            setStyle('projects-pic');
+            break;
+        }
+    }, [text, from])
 
     return ( 
-        <div className="pic">
+        <div className={style}>
             <img src={src} 
-            alt={alt}
-            width='300px' />
+            alt={alt} />
         </div>
      );
 }

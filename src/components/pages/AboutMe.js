@@ -1,6 +1,7 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { LanguageContext } from '../../context/LanguageContext';
 import src from '../../img/about.jpg';
+import srcFull from '../../img/about-full.jpg';
 import Picture from '../reusable/Picture';
 import AboutMeDetails from '../reusable/AboutMeDetails';
 
@@ -23,11 +24,19 @@ const AboutMe = () => {
         keywords: ['Strpljenje', 'Opservacija', 'Dedukcija', 'Istrajnost', 'Organizacija'],
         summary: 'Motivisani web developer sa jednogodišnjim iskustvom u .NET-u i višemesečno iskustvo kao frilenser. Dijagnostikovala i rešila probleme ( tehničke i lične :D ), napravila nekoliko web sajtova kao i malih projekata. Otvorena za rad u firmi, na daljinu kao i frilens. Spremna na konstantno učenje i usavršavanje.',
         text: 'Potreban Vam je web developer? Možete me kontaktirati preko mejla ili LinkedIn profila:',
-    })
+    });
+
+    const screenResolution = () => {
+        let screenWidth = window.screen.width;
+        return screenWidth;
+    }
 
     return (
         <div className="container">
-            <Picture src={src} text='about' />
+        { screenResolution() > 800 ? 
+            <Picture src={srcFull} text='about' from='main' /> : 
+            <Picture src={src} text='about' from='main' />
+        }
             { lang === 'en' ? 
                 <AboutMeDetails about={about} />
                 : 
