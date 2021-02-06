@@ -7,7 +7,7 @@ import resumeSr from '../../pdf/ResumeSr.pdf';
 
 const AboutMeDetails = ({ about }) => {
     const keywordsList = about.keywords;
-    
+    // Stop link for email from opening after user clicked
     return (
         <div className="about">
             <div className="intro">
@@ -28,7 +28,8 @@ const AboutMeDetails = ({ about }) => {
             </div>
             <div className="links">
                 <div className="links-text">
-                    { about.text }
+                    { about.text } <br/>
+                    <b>{ about.email }</b>
                 </div>
                 <div className="email">
                     <a href='kristina.jovanovic.code@gmail.com' onClick={() => window.open('mailto:kristina.jovanovic.code@gmail.com')}>
