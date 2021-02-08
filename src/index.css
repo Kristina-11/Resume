@@ -107,7 +107,7 @@ b {
   padding: 10px;
 }
 
-.main-pic img{
+.main-pic img {
   width: 200px;
   border-radius: 40px;
   /* border: 3px solid #413b52; */
@@ -191,20 +191,80 @@ b {
   width: 200px;
 }
 
+/* Skills page */
+.tech, .tools, .soft, .lang {
+  width: 100%;
+}
+
+.skills h1 {
+  background-color: #eae3ff;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.skills h3 {
+  font-size: 1.6rem;
+  color: #463e5a;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.skills-pic {
+  width: 100%;
+}
+
+.skills-pic img {
+  width: 100%;
+  height: 300px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 20px;
+  margin: 15px;
+}
+
+.skills ul li {
+  padding-left: 15px;
+  margin: 10px;
+  color: #898d8d;
+  font-size: 1.5rem;
+}
+
+.skills ul li::before {
+  content: "•";
+  padding-right: 6px;
+  color: #908e95;
+}
+
 @media only screen and (max-width: 400px) {
+  /* Links on the bottom changes */
   .links {
     font-size: 0.8rem;
   }
 }
 
 @media only screen and (min-width: 650px) {
-  .intro ul  li {
+  /* Resets navigation to be inline */
+  .intro ul li {
     display: inline;
+  }
+
+  .skills-pic img {
+    height: 400px;
   }
 }
 
 @media only screen and (min-width: 750px) {
-  
+  /* Navigation */
   .nav-dropdown {
     display: none;
   }
@@ -237,5 +297,22 @@ b {
 
   .about {
     width: 80%;
+  }
+
+  /* Skills page */
+  .skill-container {
+    flex-direction: column;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .tech, .tools, .soft, .lang {
+    width: auto;
+  }
+
+  .skills-pic img {
+    height: 600px;
   }
 }
