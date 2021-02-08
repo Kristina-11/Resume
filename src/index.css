@@ -196,7 +196,7 @@ b {
   width: 100%;
 }
 
-.skills h1 {
+.skills h1, .portfolio h1 {
   background-color: #eae3ff;
   padding: 10px;
   margin: 15px;
@@ -210,7 +210,7 @@ b {
   color: #463e5a;
 }
 
-.skills {
+.skills, .portfolio {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -245,6 +245,45 @@ b {
   color: #908e95;
 }
 
+/* Portfolio page */
+.portfolio-pic {
+  width: 100%;
+}
+
+.portfolio-pic img {
+  width: 100%;
+  height: 300px;
+}
+
+.portfolio h1 {
+  margin: 15px auto;
+  width: 100%;
+}
+
+.github {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+}
+
+.project {
+  margin: 10px;
+  padding: 10px;
+}
+
+.project-details-more {
+  display: none;
+}
+
 @media only screen and (max-width: 400px) {
   /* Links on the bottom changes */
   .links {
@@ -258,7 +297,7 @@ b {
     display: inline;
   }
 
-  .skills-pic img {
+  .skills-pic img, .portfolio-pic img {
     height: 400px;
   }
 }
@@ -312,7 +351,7 @@ b {
     width: auto;
   }
 
-  .skills-pic img {
+  .skills-pic img, .portfolio-pic img {
     height: 600px;
   }
 }

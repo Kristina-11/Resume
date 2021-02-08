@@ -10,19 +10,19 @@ const Portfolio = () => {
     const { lang } = useContext(LanguageContext);
 
     const [ links ] = useState([
-        { name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/' },
-        { name: 'managment', details: 'React.js & Firebase', link: 'https://projectmanagment-28660.web.app/'},
-        { name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/'},
-        { name: 'dimitrijala', details: 'CMS - Google Sites', link: 'https://www.dimitrijatucovica30.co.rs/'},
-        { name: 'library', details: 'Vanilla JavaScript + LocalStorage', link: 'https://kristina-11.github.io/Library/'},
-        { name: 'planets', details: 'Vanilla JavaScript', link: 'https://kristina-11.github.io/WeightInUniverse/'},
-        { name: 'gameRPS', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Rock-Paper-Scissors/'},
-        { name: 'calculator', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Calculator/'},
+        { name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/', more: 'Lorem Ipsum1' },
+        { name: 'managment', details: 'React.js & Firebase', link: 'https://projectmanagment-28660.web.app/', more: 'Lorem Ipsum2'},
+        { name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/', more: 'Lorem Ipsum3'},
+        { name: 'dimitrijala', details: 'CMS - Google Sites', link: 'https://www.dimitrijatucovica30.co.rs/', more: 'Lorem Ipsum4'},
+        { name: 'library', details: 'Vanilla JavaScript + LocalStorage', link: 'https://kristina-11.github.io/Library/', more: 'Lorem Ipsum5'},
+        { name: 'planets', details: 'Vanilla JavaScript', link: 'https://kristina-11.github.io/WeightInUniverse/', more: 'Lorem Ipsum6'},
+        { name: 'gameRPS', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Rock-Paper-Scissors/', more: 'Lorem Ipsum7'},
+        { name: 'calculator', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Calculator/', more: 'Lorem Ipsum8'},
     ]);
 
     return ( 
         <div className="container">
-            <Picture src={src} text='portfolio' from='main'/>
+            <Picture src={src} text='portfolio' from='portfolio'/>
             {
                 lang === 'en' ?
                     <div className="portfolio">

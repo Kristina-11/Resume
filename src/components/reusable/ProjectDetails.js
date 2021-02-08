@@ -11,6 +11,25 @@ import { useEffect, useState } from "react";
 
 const ProjectDetails = ({ info }) => {
     const [ pic, setPic ] = useState('');
+    const [ more, setMore ] = useState(true);
+
+    useEffect(() => {
+        const moreLinks = document.querySelectorAll('.more-link');
+        
+        moreLinks.forEach((link) => {
+            link.onclick = (e) => {
+                if (e.target.innerText === 'more') {
+                    setMore(false);
+                    e.target.nextElementSibling.style.display = 'block';
+                    e.target.innerText = 'less'
+                } else {
+                    setMore(true);
+                    e.target.nextElementSibling.style.display = 'none';
+                    e.target.innerText = 'more'
+                }
+            }
+        })
+    }, [more])
     
     useEffect(() => {
         switch(info.name) {
@@ -55,6 +74,10 @@ const ProjectDetails = ({ info }) => {
             </a>
             <div className="project-details">
                 { info.details }
+                <div className="more-link"> more </div>
+                <div className="project-details-more">
+                    { info.more }
+                </div>
             </div>                
         </div>
      );

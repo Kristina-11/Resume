@@ -43,6 +43,10 @@ const Picture = ({ src, text, from }) => {
             case 'projects':
             setStyle('projects-pic');
             break;
+
+            case 'portfolio':
+            setStyle('portfolio-pic');
+            break;
         }
     }, [text, from])
 
