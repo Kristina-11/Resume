@@ -393,7 +393,7 @@ b {
   padding: 20px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   /* Links on the bottom changes */
   .links {
     font-size: 0.8rem;
@@ -531,6 +531,6 @@ b {
 /* Test this out */
 @media only screen and (min-width: 1000) {
   .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img{
-    height: 800px;
+    height: 1000px;
   }
 }
