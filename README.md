@@ -1,3 +1,13 @@
+### RESUME
+
+![](https://img.shields.io/badge/-HTML5%26CSS3-blue)
+![](https://img.shields.io/badge/-React.js-brightgreen)
+
+#Site punlished at: https://kristina-11.github.io/Resume/
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Kristina-11&repo=Resume)](https://github.com/anuraghazra/github-readme-stats)
+
+<hr />
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
