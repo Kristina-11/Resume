@@ -80,8 +80,8 @@ const Experience = () => {
     });
 
     return ( 
-        <div className="container">
-            <Picture src={src} text='experience' from='main'/>
+        <div className="container exp-container">
+            <Picture src={src} text='experience' from='experience'/>
             {
                 lang === 'en' ? 
                 <WorkDetails props={experience} /> :

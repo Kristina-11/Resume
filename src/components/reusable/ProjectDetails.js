@@ -18,14 +18,14 @@ const ProjectDetails = ({ info }) => {
         
         moreLinks.forEach((link) => {
             link.onclick = (e) => {
-                if (e.target.innerText === 'more') {
+                if (e.target.innerText === 'MORE') {
                     setMore(false);
                     e.target.nextElementSibling.style.display = 'block';
-                    e.target.innerText = 'less'
+                    e.target.innerText = 'LESS'
                 } else {
                     setMore(true);
                     e.target.nextElementSibling.style.display = 'none';
-                    e.target.innerText = 'more'
+                    e.target.innerText = 'MORE'
                 }
             }
         })
@@ -74,7 +74,7 @@ const ProjectDetails = ({ info }) => {
             </a>
             <div className="project-details">
                 { info.details }
-                <div className="more-link"> more </div>
+                <div className="more-link">MORE</div>
                 <div className="project-details-more">
                     { info.more }
                 </div>

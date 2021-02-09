@@ -5,8 +5,8 @@ const WorkDetails = ({ props }) => {
             { props.experience.map((exp) => {
                 return (
                     <div className="experience" key={Math.random() * 10}>
-                        <div className="date">{ exp.date }</div>
                         <div className="title">{ exp.title }</div>
+                        <div className="date">{ exp.date }</div>
                         <div className="company-name">{ exp.company }</div>
                         <div className="details">
                             { exp.details }

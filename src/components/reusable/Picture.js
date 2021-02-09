@@ -47,6 +47,14 @@ const Picture = ({ src, text, from }) => {
             case 'portfolio':
             setStyle('portfolio-pic');
             break;
+
+            case 'experience':
+            setStyle('experience-pic');
+            break;
+
+            case 'interests':
+            setStyle('interests-pic');
+            break;
         }
     }, [text, from])
 

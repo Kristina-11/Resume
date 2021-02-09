@@ -21,7 +21,7 @@ const Portfolio = () => {
     ]);
 
     return ( 
-        <div className="container">
+        <div className="container portfolio-container">
             <Picture src={src} text='portfolio' from='portfolio'/>
             {
                 lang === 'en' ?
@@ -30,7 +30,7 @@ const Portfolio = () => {
                         <div className="summary">
                             All the code of my projects can be found on my GitHub account. <br/>
                             There you will also find documentation for projects. <br/>
-                            Projects can be viewed by clicking icon below.
+                            Projects can be viewed by clicking icon below or clicking on project picture.
                         </div>
                     </div> :
                     <div className="portfolio">
@@ -38,7 +38,7 @@ const Portfolio = () => {
                         <div className="summary">
                             Kod svih projekata možete pogledati na mom GitHub profilu.  <br/>
                             Tamo ćete naći i dokumentaciju projekata. <br/>
-                            Projekte možete pogledati klikom na sliku ispod.
+                            Projekte možete pogledati klikom na sliku ispod ili klikom na sliku projekta.
                         </div>
                     </div>
             }

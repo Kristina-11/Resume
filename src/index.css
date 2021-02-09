@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 h1 {
   color: #463e5a;
   font-size: 3rem;
@@ -23,7 +27,7 @@ b {
 
 /* Navigation */
 .nav {
-  background: linear-gradient(83deg, rgba(195,201,255,1) 0%, rgba(184,160,252,1) 100%);  
+  background: linear-gradient(83deg, rgba(195,201,255,1) 0%, rgb(149, 128, 207) 100%);  
   background: rgba(195,201,255,1);
 
   display: flex;
@@ -86,8 +90,6 @@ b {
 .nav-right {
   padding: 1.5rem;
 }
-
-/* Navigation End */
 
 /* Container */
 
@@ -187,10 +189,6 @@ b {
   color: #f3f3f3;
 }
 
-.projects-pic img {
-  width: 200px;
-}
-
 /* Skills page */
 .tech, .tools, .soft, .lang {
   width: 100%;
@@ -246,11 +244,11 @@ b {
 }
 
 /* Portfolio page */
-.portfolio-pic {
+.portfolio-pic, .experience-pic, .interests-pic {
   width: 100%;
 }
 
-.portfolio-pic img {
+.portfolio-pic img, .experience-pic img, .skills-pic img, .interests-pic img {
   width: 100%;
   height: 300px;
 }
@@ -280,9 +278,115 @@ b {
   padding: 10px;
 }
 
+.project-details {
+  color: #463e5a;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
 .project-details-more {
   display: none;
+  padding: 10px;
+  margin: 10px;
 }
+
+.more-link {
+  background-color: #eae3ff;
+  color: #463e5a;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.projects-pic img {
+  width: 100%;
+}
+
+/* Experience page */
+.learning {
+  display: flex;
+  flex-direction: column;
+}
+
+.learning h1 {
+  text-align: center;
+}
+
+.experience {
+  background-color: #aba3c2c4;
+  color: #463e5a;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 25px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.date, .company-name {
+  text-align: center;
+}
+
+.details {
+  padding: 15px;
+}
+
+.education {
+  padding: 20px;
+  color: #4f4c57;
+}
+
+.facility {
+  padding: 10px;
+  text-align: center;
+}
+
+.plan {
+  padding: 20px;
+  margin: 10px;
+  /* background-color: #aba3c2c4; */
+  color: #46444b;
+  border-top: 3px solid #463e5a;
+}
+
+.plan h3 {
+  color: #4f4c57;
+  font-style: italic;
+  padding: 10px;
+}
+
+.plan ul li {
+  list-style: none;
+}
+
+.progress h2 {
+  color: #898d8d;
+  padding: 10px;
+}
+
+.progress {
+  padding: 20px;
+  margin: 20px;
+  color: #4f4c57;
+  border-top: 3px solid #463e5a;
+}
+
+/* Interests page */
+.interests-container {
+  display: block;
+}
+
+.pic-interests {
+  display: inline-block;
+}
+
 
 @media only screen and (max-width: 400px) {
   /* Links on the bottom changes */
@@ -297,8 +401,12 @@ b {
     display: inline;
   }
 
-  .skills-pic img, .portfolio-pic img {
+  .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img {
     height: 400px;
+  }
+
+  .plan,.progress {
+    text-align: center;
   }
 }
 
@@ -339,7 +447,7 @@ b {
   }
 
   /* Skills page */
-  .skill-container {
+  .skill-container, .exp-container {
     flex-direction: column;
   }
 
@@ -351,7 +459,73 @@ b {
     width: auto;
   }
 
-  .skills-pic img, .portfolio-pic img {
-    height: 600px;
+  .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img {
+    height: 650px;
+  }
+
+  /* Portfolio page */
+  .portfolio-container {
+    flex-direction: column;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .more-link {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .projects-pic img {
+    width: 100%;
+  }
+
+  /* Experience page */
+  .learning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .learning h1:first-of-type {
+    grid-column: 1 / span 2;
+  }
+
+  .learning h1:last-of-type {
+    grid-column: 1 / span 2;
+  }
+
+  .education {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+
+  .facility {
+    padding: 20px;
+  }
+
+  .plan {
+    grid-column: 1;
+    grid-row: 5;
+    border: none;
+  }
+
+  .progress {
+    grid-column: 2;
+    grid-row: 5;
+    border: none;
+  }
+
+  .plan, .progress {
+    background-color: #aba3c2c4;
+    border-radius: 20px;
+  }
+}
+
+/* Test this out */
+@media only screen and (min-width: 1000) {
+  .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img{
+    height: 800px;
   }
 }
