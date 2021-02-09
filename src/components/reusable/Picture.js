@@ -5,11 +5,6 @@ const Picture = ({ src, text, from }) => {
     const [ alt, setAlt ] = useState('');
     const [ style, setStyle ] = useState('');
 
-    const PicVariants = {
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-    }
-
     useEffect(() => {
         switch(text) {
             case 'about':
@@ -65,15 +60,10 @@ const Picture = ({ src, text, from }) => {
     }, [text, from])
 
     return ( 
-        <motion.div className={style} 
-            initial="hidden"
-            animate="visible" 
-            variants={PicVariants} 
-            transition={{ duration: 1}
-        }>
+        <div className={style}>
             <img src={src} 
             alt={alt} />
-        </motion.div>
+        </div>
      );
 }
  

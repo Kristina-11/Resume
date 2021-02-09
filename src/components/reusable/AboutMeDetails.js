@@ -44,7 +44,7 @@ const AboutMeDetails = ({ about }) => {
             <div className="links">
                 <div className="links-text">
                     { about.text } <br/>
-                    <b>{ about.email }</b>
+                    <strong>{ about.email }</strong>
                 </div>
                 <div className="email">
                     <a href='kristina.jovanovic.code@gmail.com' onClick={(e) => {

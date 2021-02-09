@@ -17,7 +17,7 @@ h2 {
   color: #898d8d;
 }
 
-b {
+strong {
   color: #3d405d;
 }
 
@@ -393,9 +393,9 @@ b {
   padding: 20px;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   /* Links on the bottom changes */
-  .links {
+  strong {
     font-size: 0.8rem;
   }
 }
@@ -413,6 +413,7 @@ b {
   .plan,.progress {
     text-align: center;
   }
+
 }
 
 @media only screen and (min-width: 750px) {
@@ -428,7 +429,7 @@ b {
     padding-top: 2.2rem;
   }
 
-  .nav-left a{
+  .nav-left a {
     display: inline;
   }
   
@@ -444,7 +445,7 @@ b {
   }
 
   .main-pic {
-    width: 25%;
+    width: 20%;
   }
 
   .about {
@@ -532,5 +533,9 @@ b {
 @media only screen and (min-width: 1000) {
   .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img{
     height: 1000px;
+  }
+
+  .main-pic img {
+    width: 400px;
   }
 }

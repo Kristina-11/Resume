@@ -10,7 +10,7 @@ const Portfolio = () => {
 
     const [ links ] = useState([
         { name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/', more: 'ADMIN: admin, password,USER: testing@test, testing.' },
-        { name: 'managment', details: 'React.js & Firebase', link: 'https://projectmanagment-28660.web.app/', more: 'kakashi@test.com, testing12345.'},
+        { name: 'managment', details: 'React.js, Redux & Firebase', link: 'https://projectmanagment-28660.web.app/', more: 'kakashi@test.com, testing12345.'},
         { name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/', more: 'Made with React and APIs. :D'},
         { name: 'dimitrijala', details: 'CMS - Google Sites', link: 'https://www.dimitrijatucovica30.co.rs/', more: ':D'},
         { name: 'library', details: 'Vanilla JavaScript + LocalStorage', link: 'https://kristina-11.github.io/Library/', more: 'IDEAS'},
