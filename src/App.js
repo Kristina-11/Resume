@@ -11,7 +11,7 @@ import Interests from "./components/pages/Interests";
 function App() {
   return (
     <LanguageContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
         <div className="App">
           <Nav />
           <Switch>
