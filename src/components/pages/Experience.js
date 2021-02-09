@@ -40,7 +40,7 @@ const Experience = () => {
             courses: ['Node.js', 'Next.js', 'Vue.js'],
             books: ['Clean Architecture by Robert C. Martin']
         },
-        progress: ['Modern React Tutorial', 'Materialize.css', 'Framer Motion']
+        progress: ['React Tutorial', 'Framer Motion']
     });
 
     const [ iskustvo ] = useState({
@@ -76,7 +76,7 @@ const Experience = () => {
             courses: ['Node.js', 'Next.js', 'Vue.js'],
             books: ['Čista Arhitektura - Robert C. Martin']
         },
-        progress: ['Modern React Tutorial', 'Materialize.css', 'Framer Motion']
+        progress: ['React Tutorial', 'Framer Motion']
     });
 
     return ( 

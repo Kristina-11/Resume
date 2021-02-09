@@ -362,7 +362,7 @@ b {
   padding: 10px;
 }
 
-.plan ul li {
+.plan ul li, .progress ul li {
   list-style: none;
 }
 

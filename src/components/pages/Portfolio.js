@@ -5,19 +5,18 @@ import { LanguageContext } from "../../context/LanguageContext";
 import github from '../../img/github.png';
 import ProjectDetails from "../reusable/ProjectDetails";
 
-// Add tooltip for info about sites that require login details
 const Portfolio = () => {
     const { lang } = useContext(LanguageContext);
 
     const [ links ] = useState([
-        { name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/', more: 'Lorem Ipsum1' },
-        { name: 'managment', details: 'React.js & Firebase', link: 'https://projectmanagment-28660.web.app/', more: 'Lorem Ipsum2'},
-        { name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/', more: 'Lorem Ipsum3'},
-        { name: 'dimitrijala', details: 'CMS - Google Sites', link: 'https://www.dimitrijatucovica30.co.rs/', more: 'Lorem Ipsum4'},
-        { name: 'library', details: 'Vanilla JavaScript + LocalStorage', link: 'https://kristina-11.github.io/Library/', more: 'Lorem Ipsum5'},
-        { name: 'planets', details: 'Vanilla JavaScript', link: 'https://kristina-11.github.io/WeightInUniverse/', more: 'Lorem Ipsum6'},
-        { name: 'gameRPS', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Rock-Paper-Scissors/', more: 'Lorem Ipsum7'},
-        { name: 'calculator', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Calculator/', more: 'Lorem Ipsum8'},
+        { name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/', more: 'ADMIN: admin, password,USER: testing@test, testing.' },
+        { name: 'managment', details: 'React.js & Firebase', link: 'https://projectmanagment-28660.web.app/', more: 'kakashi@test.com, testing12345.'},
+        { name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/', more: 'Made with React and APIs. :D'},
+        { name: 'dimitrijala', details: 'CMS - Google Sites', link: 'https://www.dimitrijatucovica30.co.rs/', more: ':D'},
+        { name: 'library', details: 'Vanilla JavaScript + LocalStorage', link: 'https://kristina-11.github.io/Library/', more: 'IDEAS'},
+        { name: 'planets', details: 'Vanilla JavaScript', link: 'https://kristina-11.github.io/WeightInUniverse/', more: 'COME'},
+        { name: 'gameRPS', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Rock-Paper-Scissors/', more: 'FROM'},
+        { name: 'calculator', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Calculator/', more: 'CURIOSITY'},
     ]);
 
     return ( 
