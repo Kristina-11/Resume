@@ -37,7 +37,7 @@ const Experience = () => {
             years: '2006 - 2010'
         }],
         future: {
-            courses: ['Node.js', 'Next.js', 'Vue.js'],
+            courses: ['Node.js', 'Next.js'],
             books: ['Clean Architecture by Robert C. Martin']
         },
         progress: ['React Tutorial', 'Framer Motion']
@@ -73,7 +73,7 @@ const Experience = () => {
             years: '2006 - 2010'
         }],
         future: {
-            courses: ['Node.js', 'Next.js', 'Vue.js'],
+            courses: ['Node.js', 'Next.js'],
             books: ['Čista Arhitektura - Robert C. Martin']
         },
         progress: ['React Tutorial', 'Framer Motion']
