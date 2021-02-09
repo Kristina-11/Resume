@@ -4,15 +4,30 @@ import linkedIn from '../../img/linedin.png';
 import github from '../../img/github.png';
 import resumeEn from '../../pdf/Resume.pdf';
 import resumeSr from '../../pdf/ResumeSr.pdf';
+import { motion } from 'framer-motion';
 
 const AboutMeDetails = ({ about }) => {
     const keywordsList = about.keywords;
-    // Stop link for email from opening after user clicked
+
+    const NameVariants = {
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -500 },
+    }
+
+    const PositionVariants = {
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: 1000 },
+    }
+
     return (
         <div className="about">
             <div className="intro">
-                <h1>{ about.name }</h1>
-                <h2>{ about.position }</h2>
+                <motion.h1 initial="hidden" animate="visible" variants={NameVariants} transition={{ duration: 1.5}}>
+                    { about.name }
+                </motion.h1>
+                <motion.h2 initial="hidden" animate="visible" variants={PositionVariants} transition={{ duration: 1.5}}>
+                    { about.position }
+                </motion.h2>
                 <span>
                     <ul>
                         { keywordsList.map((keyword) => {
@@ -32,7 +47,10 @@ const AboutMeDetails = ({ about }) => {
                     <b>{ about.email }</b>
                 </div>
                 <div className="email">
-                    <a href='kristina.jovanovic.code@gmail.com' onClick={() => window.open('mailto:kristina.jovanovic.code@gmail.com')}>
+                    <a href='kristina.jovanovic.code@gmail.com' onClick={(e) => {
+                        e.preventDefault()
+                        window.open('mailto:kristina.jovanovic.code@gmail.com')
+                    }}>
                         <img src={email} alt='email icon' />
                     </a>
                 </div>

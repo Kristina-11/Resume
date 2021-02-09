@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Picture = ({ src, text, from }) => {
     const [ alt, setAlt ] = useState('');
     const [ style, setStyle ] = useState('');
+
+    const PicVariants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    }
 
     useEffect(() => {
         switch(text) {
@@ -59,10 +65,15 @@ const Picture = ({ src, text, from }) => {
     }, [text, from])
 
     return ( 
-        <div className={style}>
+        <motion.div className={style} 
+            initial="hidden"
+            animate="visible" 
+            variants={PicVariants} 
+            transition={{ duration: 1}
+        }>
             <img src={src} 
             alt={alt} />
-        </div>
+        </motion.div>
      );
 }
  
