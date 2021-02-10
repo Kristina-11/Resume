@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-// Resolve analytics
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-PSVFLJ7Q4N'); 
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

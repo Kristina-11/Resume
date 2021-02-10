@@ -7,8 +7,15 @@ import Portfolio from "./components/pages/Portfolio";
 import Skills from "./components/pages/Skills";
 import LanguageContextProvider from "./context/LanguageContext";
 import Interests from "./components/pages/Interests";
+import ReactGA from 'react-ga';
+
+function initializeAnalytics() {
+  ReactGA.initialize('G-BH6LZFL00V'); 
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 function App() {
+  initializeAnalytics();
   return (
     <LanguageContextProvider>
       <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
