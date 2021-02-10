@@ -4,6 +4,8 @@ import { useContext, useState } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
 import github from '../../img/github.png';
 import ProjectDetails from "../reusable/ProjectDetails";
+import { containerVariants } from "../Variants";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
     const { lang } = useContext(LanguageContext);
@@ -20,7 +22,10 @@ const Portfolio = () => {
     ]);
 
     return ( 
-        <div className="container portfolio-container">
+        <motion.div className="container portfolio-container" variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit">
             <Picture src={src} text='portfolio' from='portfolio'/>
             {
                 lang === 'en' ?
@@ -53,7 +58,7 @@ const Portfolio = () => {
                     })
                 }
             </span>
-        </div>
+        </motion.div>
      );
 }
  

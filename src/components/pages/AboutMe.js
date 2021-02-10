@@ -4,10 +4,12 @@ import src from '../../img/about.jpg';
 import srcFull from '../../img/about-full.jpg';
 import Picture from '../reusable/Picture';
 import AboutMeDetails from '../reusable/AboutMeDetails';
+import { animate, motion } from 'framer-motion';
+import { containerVariants } from "../Variants";
 
 const AboutMe = () => { 
     const { lang } = useContext(LanguageContext);
-
+    
     const [ about ] = useState({
         id: 1,
         name: 'Kristina Jovanovic',
@@ -34,7 +36,11 @@ const AboutMe = () => {
     }
 
     return (
-        <div className="container about-container">
+        <motion.div className="container about-container"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit">
             { screenResolution() > 1000 ? 
                 <Picture src={srcFull} text='about' from='main' /> : 
                 <Picture src={src} text='about' from='main' />
@@ -44,7 +50,7 @@ const AboutMe = () => {
                 : 
                 <AboutMeDetails about={aboutSr} />
             }
-        </div>
+        </motion.div>
      );
 }
  

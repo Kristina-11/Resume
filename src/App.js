@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import AboutMe from "./components/pages/AboutMe";
 import Experience from "./components/pages/Experience";
 import Nav from "./components/Nav";
@@ -8,6 +8,7 @@ import Skills from "./components/pages/Skills";
 import LanguageContextProvider from "./context/LanguageContext";
 import Interests from "./components/pages/Interests";
 import ReactGA from 'react-ga';
+import { AnimatePresence } from "framer-motion";
 
 function initializeAnalytics() {
   ReactGA.initialize('UA-189391863-1'); 
@@ -16,19 +17,20 @@ function initializeAnalytics() {
 
 function App() {
   initializeAnalytics();
+  
   return (
     <LanguageContextProvider>
       <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
         <div className="App">
           <Nav />
-          <Switch>
-            <Route exact path='/' component={AboutMe} />
-            <Route path='/skills' component={Skills} />
-            <Route path='/portfolio' component={Portfolio} />
-            <Route path='/work' component={Experience} />
-            <Route path='/interests' component={Interests} />
-            <Route path='*' component={PageNotFound} />
-          </Switch>
+            <Switch>
+              <Route exact path='/' component={AboutMe} />
+              <Route path='/skills' component={Skills} />
+              <Route path='/portfolio' component={Portfolio} />
+              <Route path='/work' component={Experience} />
+              <Route path='/interests' component={Interests} />
+              <Route path='*' component={PageNotFound} />
+            </Switch>
         </div>
       </BrowserRouter>
     </LanguageContextProvider>

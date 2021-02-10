@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { containerVariants } from "../Variants";
 
 const Picture = ({ src, text, from }) => {
     const [ alt, setAlt ] = useState('');
@@ -60,10 +61,13 @@ const Picture = ({ src, text, from }) => {
     }, [text, from])
 
     return ( 
-        <div className={style}>
+        <motion.div variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className={style}>
             <img src={src} 
             alt={alt} />
-        </div>
+        </motion.div>
      );
 }
  

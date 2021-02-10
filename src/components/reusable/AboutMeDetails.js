@@ -9,25 +9,15 @@ import { motion } from 'framer-motion';
 const AboutMeDetails = ({ about }) => {
     const keywordsList = about.keywords;
 
-    const NameVariants = {
-        visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: -500 },
-    }
-
-    const PositionVariants = {
-        visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: 1000 },
-    }
-
     return (
         <div className="about">
             <div className="intro">
-                <motion.h1 initial="hidden" animate="visible" variants={NameVariants} transition={{ duration: 1.5}}>
+                <h1>
                     { about.name }
-                </motion.h1>
-                <motion.h2 initial="hidden" animate="visible" variants={PositionVariants} transition={{ duration: 1.5}}>
+                </h1>
+                <h2>
                     { about.position }
-                </motion.h2>
+                </h2>
                 <span>
                     <ul>
                         { keywordsList.map((keyword) => {

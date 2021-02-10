@@ -3,10 +3,12 @@ import SkillsList from "../reusable/SkillsList";
 import src from '../../img/skills.jpg';
 import { useContext, useState } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
+import { motion } from "framer-motion";
+import { containerVariants } from "../Variants";
 
 const Skills = () => {
     const { lang } = useContext(LanguageContext);
-
+    
     const [ techSkills ] = useState({
         frontend: ['HTML5&CSS3', 'JavaScript', 'React.js'],
         backend: ['C# - .NET, .NET Core'],
@@ -43,14 +45,17 @@ const Skills = () => {
     });
 
     return ( 
-        <div className="container skill-container">
+        <motion.div className="container skill-container" variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit">
             <Picture src={src} text='skills' from='skills' />
             { lang === 'en' ? 
                 <SkillsList tech={techSkills} tools={tools} org={org} language={language.lan} lang={titles.en} />
             :
                 <SkillsList tech={techSkills} tools={tools} org={org} language={language.lanSr} lang={titles.sr} />
             }
-        </div>
+        </motion.div>
      );
 }
  
