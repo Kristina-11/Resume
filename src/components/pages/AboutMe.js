@@ -34,11 +34,11 @@ const AboutMe = () => {
     }
 
     return (
-        <div className="container">
-        { screenResolution() > 800 ? 
-            <Picture src={srcFull} text='about' from='main' /> : 
-            <Picture src={src} text='about' from='main' />
-        }
+        <div className="container about-container">
+            { screenResolution() > 1000 ? 
+                <Picture src={srcFull} text='about' from='main' /> : 
+                <Picture src={src} text='about' from='main' />
+            }
             { lang === 'en' ? 
                 <AboutMeDetails about={about} />
                 : 

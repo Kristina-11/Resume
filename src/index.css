@@ -439,18 +439,6 @@ strong {
 }
 
 @media only screen and (min-width: 800px) {
-  .container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .main-pic {
-    width: 20%;
-  }
-
-  .about {
-    width: 80%;
-  }
 
   /* Skills page */
   .skill-container, .exp-container {
@@ -530,12 +518,25 @@ strong {
 }
 
 /* Test this out */
-@media only screen and (min-width: 1000) {
-  .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img{
-    height: 1000px;
+@media only screen and (min-width: 1000px) {
+  .about-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
+  .main-pic {
+    width: 20%;
+  }
+
+  .about {
+    width: 80%;
+  }
+
+  /* .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img{
+    height: 1000px;
+  } */
+
   .main-pic img {
-    width: 400px;
+    width: 100%;
   }
 }
