@@ -10,7 +10,7 @@ import Interests from "./components/pages/Interests";
 import ReactGA from 'react-ga';
 
 function initializeAnalytics() {
-  ReactGA.initialize('G-BH6LZFL00V'); 
+  ReactGA.initialize('UA-189391863-1'); 
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
