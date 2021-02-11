@@ -20,7 +20,7 @@ function App() {
   
   return (
     <LanguageContextProvider>
-      <HashRouter basename={`${process.env.PUBLIC_URL}/`}>
+      <HashRouter basename="/">
         <div className="App">
           <Nav />
             <Switch>
