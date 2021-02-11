@@ -554,11 +554,6 @@ strong {
     display: none;
   }
 
-  body, html {
-    height: 100%;
-    margin: 0;
-  }
-
   .container {
     background-color: #d6cbf696;
     background-blend-mode: lighten;
@@ -569,13 +564,13 @@ strong {
     height: 100%;
   }
 
-  .about-container, .portfolio-container, .exp-container, .interests-container {
+  .skill-container,.about-container, .portfolio-container, .exp-container, .interests-container {
     background: none;
   }
 
-  .skill-container {
+  /* .skill-container {
     background-image: url('../src/img/skills.jpg');
-  }
+  } */
 
   .skills ul {
     background-color: #eae3ff81;
