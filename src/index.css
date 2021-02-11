@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 100%;
 }
 
 h1 {
@@ -553,6 +554,11 @@ strong {
     display: none;
   }
 
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+
   .container {
     background-color: #d6cbf696;
     background-blend-mode: lighten;
@@ -560,9 +566,10 @@ strong {
     background-attachment: scroll;
     background-size: cover; 
     background-position: center;
+    height: 100%;
   }
 
-  .portfolio-container, .exp-container, .interests-container {
+  .about-container, .portfolio-container, .exp-container, .interests-container {
     background: none;
   }
 
