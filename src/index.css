@@ -554,7 +554,7 @@ strong {
     display: none;
   }
 
-  .container {
+  /* .container {
     background-color: #d6cbf696;
     background-blend-mode: lighten;
     background-repeat: no-repeat;
@@ -566,7 +566,7 @@ strong {
 
   .skill-container,.about-container, .portfolio-container, .exp-container, .interests-container {
     background: none;
-  }
+  } */
 
   /* .skill-container {
     background-image: url('../src/img/skills.jpg');

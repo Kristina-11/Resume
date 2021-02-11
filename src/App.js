@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Switch, useLocation } from "react-router-dom";
 import AboutMe from "./components/pages/AboutMe";
 import Experience from "./components/pages/Experience";
 import Nav from "./components/Nav";
@@ -20,7 +20,7 @@ function App() {
   
   return (
     <LanguageContextProvider>
-      <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
+      <HashRouter basename={`${process.env.PUBLIC_URL}/`}>
         <div className="App">
           <Nav />
             <Switch>
@@ -32,7 +32,7 @@ function App() {
               <Route path='*' component={PageNotFound} />
             </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </LanguageContextProvider>
   );
 }

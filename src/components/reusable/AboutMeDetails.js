@@ -30,8 +30,9 @@ const AboutMeDetails = ({ about }) => {
         },
         hidden: { opacity: 0, x: 1000 },
     }
+
     return (
-        <div className="about">
+        <motion.div className="about" initial={{opacity: 0}} animate={{opacity: 1}}>
             <div className="intro">
                 <motion.h1 
                 initial="hidden" 
@@ -91,7 +92,7 @@ const AboutMeDetails = ({ about }) => {
                     } (PDF)
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

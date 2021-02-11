@@ -34,6 +34,10 @@ const AboutMe = () => {
         return screenWidth;
     }
 
+    useEffect(() => {
+        
+    }, [lang])
+
     return (
         <div className="container about-container">
             { screenResolution() > 1000 ? 
