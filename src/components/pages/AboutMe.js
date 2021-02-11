@@ -5,7 +5,6 @@ import srcFull from '../../img/about-full.jpg';
 import Picture from '../reusable/Picture';
 import AboutMeDetails from '../reusable/AboutMeDetails';
 import { animate, motion } from 'framer-motion';
-import { containerVariants } from "../Variants";
 
 const AboutMe = () => { 
     const { lang } = useContext(LanguageContext);
@@ -36,11 +35,7 @@ const AboutMe = () => {
     }
 
     return (
-        <motion.div className="container about-container"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit">
+        <div className="container about-container">
             { screenResolution() > 1000 ? 
                 <Picture src={srcFull} text='about' from='main' /> : 
                 <Picture src={src} text='about' from='main' />
@@ -50,7 +45,7 @@ const AboutMe = () => {
                 : 
                 <AboutMeDetails about={aboutSr} />
             }
-        </motion.div>
+        </div>
      );
 }
  

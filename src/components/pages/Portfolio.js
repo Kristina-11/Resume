@@ -24,8 +24,7 @@ const Portfolio = () => {
     return ( 
         <motion.div className="container portfolio-container" variants={containerVariants}
         initial="hidden"
-        animate="visible"
-        exit="exit">
+        animate="visible">
             <Picture src={src} text='portfolio' from='portfolio'/>
             {
                 lang === 'en' ?

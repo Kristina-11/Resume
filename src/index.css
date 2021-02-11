@@ -256,7 +256,7 @@ strong {
 
 .portfolio h1 {
   margin: 15px auto;
-  width: 100%;
+  width: 80%;
 }
 
 .github {
@@ -525,7 +525,6 @@ strong {
   }
 }
 
-/* Test this out */
 @media only screen and (min-width: 1000px) {
   .about-container {
     flex-direction: row;
@@ -546,5 +545,42 @@ strong {
 
   .main-pic img {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img {
+    display: none;
+  }
+
+  .container {
+    background-color: #d6cbf696;
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover; 
+    background-position: center;
+  }
+
+  .portfolio-container, .exp-container, .interests-container {
+    background: none;
+  }
+
+  .skill-container {
+    background-image: url('../src/img/skills.jpg');
+  }
+
+  .skills ul {
+    background-color: #eae3ff81;
+    border-radius: 10px;
+  }
+
+  .skills ul li {
+    color: #5a585f;
+  }
+
+  .learning {
+    padding: 20px;
+    margin: 20px;
   }
 }
