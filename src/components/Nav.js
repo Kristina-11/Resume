@@ -52,14 +52,14 @@ const Nav = () => {
                 <motion.div className="nav-left nav-hide" animate={{ opacity: [ 0.5, 1], duration: 0.5 }}>
                     <NavLink exact to='/' activeClassName='focused'>About</NavLink>
                     <NavLink to='/skills' activeClassName='focused'>Skills</NavLink>
-                    <NavLink to='/portfolio' activeClassName='focused'>Portfolio</NavLink>
+                    <NavLink to='/portfolio' activeClassName='focused'>Projects</NavLink>
                     <NavLink to='/work' activeClassName='focused'>Experience&Education</NavLink>
                     <NavLink to='/interests' activeClassName='focused'>Interests</NavLink>
                 </motion.div> : 
                 <motion.div className="nav-left nav-hide" animate={{ opacity: [ 0.5, 1], duration: 0.5 }}>
                     <NavLink exact to='/' activeClassName='focused'>Info</NavLink>
                     <NavLink to='/skills' activeClassName='focused'>Veštine</NavLink>
-                    <NavLink to='/portfolio' activeClassName='focused'>Portfolio</NavLink>
+                    <NavLink to='/portfolio' activeClassName='focused'>Projekti</NavLink>
                     <NavLink to='/work' activeClassName='focused'>Iskustvo&Edukacija</NavLink>
                     <NavLink to='/interests' activeClassName='focused'>Interesovanja</NavLink>
                 </motion.div>

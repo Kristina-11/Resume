@@ -304,8 +304,45 @@ strong {
   margin: 10px auto;
 }
 
+.more-link:hover {
+  background-color: #cfbffa;
+}
+
+@keyframes rotate {
+  0% {transform: rotate(0);}
+  25% {transform: rotate(-5deg);}
+  50% {transform: rotate(5deg);}
+  100% {transform: rotate(0);}
+}
+
+@keyframes project-expand {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+@keyframes project-normal {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}
+
+.project-expansion {
+  animation: project-expand 2s;
+  background-color: #d6d3df;
+  border-radius: 20px;
+}
+
+.project-normal {
+  animation: project-normal 2s;
+}
+
 .projects-pic img {
   width: 100%;
+}
+
+.projects-pic img:hover {
+  animation: rotate 1s;
 }
 
 /* Experience page */

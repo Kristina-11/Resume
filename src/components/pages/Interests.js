@@ -17,23 +17,14 @@ const Interests = () => {
     return ( 
         <motion.div className="container interests-container" variants={containerVariants}
         initial="hidden"
-        animate="visible"
-        exit="exit">
-            {
-                lang === 'en' ? 
-                <h1>Page in construction</h1> :
-                <h1>Strana u pripremi</h1>
-            }
-            {/* <div className="picture-show">
+        animate="visible">
+            <div className="picture-show">
                 <img src={beer} width='50px' />
                 <img src={journaling} width='50px' />
                 <img src={pawlife} width='50px' />
                 <img src={pingpong} width='50px' />
                 <img src={sims} width='50px' />
                 <img src={swimming} width='50px' />
-            </div> */}
-            <div className="game">
-                {/* Make a game here */}
             </div>
         </motion.div>
      );
