@@ -40,7 +40,7 @@ const Interests = () => {
         animate="visible">
             <div className="picture-show">
                 {
-                    lang === 'EN' ?
+                    lang === 'en' ?
                     <h1>Page in construction</h1> :
                     <h1>Strana u pripremi</h1>
                 }
