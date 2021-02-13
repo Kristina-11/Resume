@@ -9,6 +9,16 @@ const Nav = () => {
     const { lang, changeLanguage } = useContext(LanguageContext);
 
     const [ dropdown, setDropdown ] = useState(false);
+    const [ screen, setScreen ] = useState();
+
+    const screenResolution = () => {
+        let screenWidth = window.screen.width;
+        setScreen(screenWidth)
+        return screenWidth;
+    }
+    useEffect(() => {
+        screenResolution();
+    })
     
     const handleDropdown = (e) => {
         setDropdown(!dropdown);
@@ -49,14 +59,14 @@ const Nav = () => {
                 <img src={dropdownImg} alt="Dropdown menu" />
             </div>
             { lang === 'en' ? 
-                <motion.div className="nav-left nav-hide" animate={{ opacity: [ 0.5, 1], duration: 0.5 }}>
+                <motion.div className="nav-left nav-hide" animate={ screen > 750 ? { opacity: [ 0.5, 1], duration: 0.5 } : { }}>
                     <NavLink exact to='/' activeClassName='focused'>About</NavLink>
                     <NavLink to='/skills' activeClassName='focused'>Skills</NavLink>
                     <NavLink to='/portfolio' activeClassName='focused'>Projects</NavLink>
                     <NavLink to='/work' activeClassName='focused'>Experience&Education</NavLink>
                     <NavLink to='/interests' activeClassName='focused'>Interests</NavLink>
                 </motion.div> : 
-                <motion.div className="nav-left nav-hide" animate={{ opacity: [ 0.5, 1], duration: 0.5 }}>
+                <motion.div className="nav-left nav-hide" animate={ screen > 750 ? { opacity: [ 0.5, 1], duration: 0.5 } : { }}>
                     <NavLink exact to='/' activeClassName='focused'>Info</NavLink>
                     <NavLink to='/skills' activeClassName='focused'>Veštine</NavLink>
                     <NavLink to='/portfolio' activeClassName='focused'>Projekti</NavLink>

@@ -20,3 +20,25 @@ export const containerVariants = {
         }
     }
 }
+
+export const NameVariants = {
+    visible: { 
+        opacity: 1, 
+        x: 0, 
+        transition: {
+            duration: 1.5
+        }
+    },
+    hidden: { opacity: 0, x: -500 },
+}
+
+export const PositionVariants = {
+    visible: { 
+        opacity: 1, 
+        x: 0,
+        transition: {
+            duration: 1.5
+        }
+    },
+    hidden: { opacity: 0, x: 1000 },
+}

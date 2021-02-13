@@ -35,7 +35,7 @@ strong {
   justify-content: space-between;
 }
 
- .nav-dropdown {
+.nav-dropdown {
   padding: 1.2rem;
 }
 
@@ -437,6 +437,10 @@ strong {
   /* Links on the bottom changes */
   strong {
     display: none;
+  }
+
+  .picture-show h1 {
+    font-size: 1rem;
   }
 }
 

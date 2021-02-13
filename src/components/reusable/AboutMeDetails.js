@@ -5,31 +5,10 @@ import github from '../../img/github.png';
 import resumeEn from '../../pdf/Resume.pdf';
 import resumeSr from '../../pdf/ResumeSr.pdf';
 import { motion } from 'framer-motion';
+import { NameVariants, PositionVariants } from '../Variants';
 
 const AboutMeDetails = ({ about }) => {
     const keywordsList = about.keywords;
-
-    const NameVariants = {
-        visible: { 
-            opacity: 1, 
-            x: 0, 
-            transition: {
-                duration: 1.5
-            }
-        },
-        hidden: { opacity: 0, x: -500 },
-    }
-
-    const PositionVariants = {
-        visible: { 
-            opacity: 1, 
-            x: 0,
-            transition: {
-                duration: 1.5
-            }
-        },
-        hidden: { opacity: 0, x: 1000 },
-    }
 
     return (
         <motion.div className="about" initial={{opacity: 0}} animate={{opacity: 1}}>
