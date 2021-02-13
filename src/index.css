@@ -296,6 +296,7 @@ strong {
 
 .more-link {
   background-color: #eae3ff;
+  border-radius: 20px;
   color: #463e5a;
   font-weight: bold;
   text-align: center;
