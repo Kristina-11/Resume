@@ -3,7 +3,7 @@ import SkillsList from "../reusable/SkillsList";
 import src from '../../img/skills.jpg';
 import { useContext, useState } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { containerVariants } from "../Variants";
 
 const Skills = () => {
@@ -48,7 +48,7 @@ const Skills = () => {
         <motion.div className="container skill-container" variants={containerVariants}
         initial="hidden"
         animate="visible"
-        exit="exit">
+        exit={{ x: '-200vw', transition: { duration: 3 } }}>
             <Picture src={src} text='skills' from='skills' />
             { lang === 'en' ? 
                 <SkillsList tech={techSkills} tools={tools} org={org} language={language.lan} lang={titles.en} />

@@ -10,6 +10,13 @@ export const containerVariants = {
             duration: 1,
             type: 'spring',
             bounce: 0.2,
+            when: 'beforeChildren'
+        }
+    },
+    exit: {
+        x: '-200vw',
+        transition: {
+            duration: 1
         }
     }
 }

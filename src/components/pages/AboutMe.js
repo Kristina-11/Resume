@@ -4,7 +4,8 @@ import src from '../../img/about.jpg';
 import srcFull from '../../img/about-full.jpg';
 import Picture from '../reusable/Picture';
 import AboutMeDetails from '../reusable/AboutMeDetails';
-import { animate, motion } from 'framer-motion';
+import { animate, AnimatePresence, motion } from 'framer-motion';
+import { containerVariants } from "../Variants";
 
 const AboutMe = () => { 
     const { lang } = useContext(LanguageContext);
@@ -34,12 +35,9 @@ const AboutMe = () => {
         return screenWidth;
     }
 
-    useEffect(() => {
-        
-    }, [lang])
-
     return (
-        <div className="container about-container">
+        <motion.div className="container about-container"
+        variants={containerVariants} exit={{ x: '-200vw', transition: { duration: 3 } }}>
             { screenResolution() > 1000 ? 
                 <Picture src={srcFull} text='about' from='main' /> : 
                 <Picture src={src} text='about' from='main' />
@@ -49,7 +47,7 @@ const AboutMe = () => {
                 : 
                 <AboutMeDetails about={aboutSr} />
             }
-        </div>
+        </motion.div>
      );
 }
  

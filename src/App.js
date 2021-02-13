@@ -17,13 +17,14 @@ function initializeAnalytics() {
 
 function App() {
   initializeAnalytics();
+  const location = useLocation();
   
   return (
     <LanguageContextProvider>
-      <HashRouter basename="/">
-        <div className="App">
-          <Nav />
-            <Switch>
+      <div className="App">
+        <Nav />
+          <AnimatePresence exitBeforeEnter>
+            <Switch location={location} key={location.key}>
               <Route exact path='/' component={AboutMe} />
               <Route path='/skills' component={Skills} />
               <Route path='/portfolio' component={Portfolio} />
@@ -31,8 +32,8 @@ function App() {
               <Route path='/interests' component={Interests} />
               <Route path='*' component={PageNotFound} />
             </Switch>
-        </div>
-      </HashRouter>
+          </AnimatePresence>
+      </div>
     </LanguageContextProvider>
   );
 }

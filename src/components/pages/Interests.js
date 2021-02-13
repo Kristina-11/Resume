@@ -37,7 +37,8 @@ const Interests = () => {
     return ( 
         <motion.div className="container interests-container" variants={containerVariants}
         initial="hidden"
-        animate="visible">
+        animate="visible"
+        exit="exit">
             <div className="picture-show">
                 {
                     lang === 'en' ?
