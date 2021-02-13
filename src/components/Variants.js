@@ -1,4 +1,3 @@
-
 export const containerVariants = {
     hidden: {
         x: '-200vw',
