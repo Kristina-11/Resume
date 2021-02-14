@@ -34,7 +34,7 @@ const Portfolio = () => {
                         <div className="summary">
                             All the code of my projects can be found on my GitHub account. <br/>
                             There you will also find documentation for projects. <br/>
-                            Projects can be viewed by clicking icon below or clicking on project picture.
+                            <b>NOTE:</b>Projects can be viewed by clicking icon below or clicking on project picture.
                         </div>
                     </div> :
                     <div className="portfolio">
@@ -42,7 +42,7 @@ const Portfolio = () => {
                         <div className="summary">
                             Kod svih projekata možete pogledati na mom GitHub profilu.  <br/>
                             Tamo ćete naći i dokumentaciju projekata. <br/>
-                            Projekte možete pogledati klikom na sliku ispod ili klikom na sliku projekta.
+                            <b>NOTE:</b>Projekte možete pogledati klikom na ikonu ispod ili klikom na sliku projekta.
                         </div>
                     </div>
             }
