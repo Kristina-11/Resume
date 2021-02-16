@@ -119,7 +119,8 @@ strong {
 
 /* About page  */
 .about {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   padding: 10px;
 }
 
@@ -141,7 +142,6 @@ strong {
   display: block;
   padding: 5px;
   font-style: italic;
-  font-size: 1.2rem;
 }
 
 .contact {
@@ -621,14 +621,16 @@ strong {
   .about-container {
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 80% !important;
+    margin: 0 auto;
   }
 
   .main-pic {
-    width: 20%;
+    /* width: 20%; */
   }
 
   .about {
-    width: 80%;
+    /* width: 80%; */
   }
 
   /* .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img{
@@ -638,9 +640,22 @@ strong {
   .main-pic img {
     width: 100%;
   }
+
+  .learning {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .main-pic img{
+    width: 80%;
+  }
+
+  .exp-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img {
     display: none;
   }
