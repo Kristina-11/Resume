@@ -119,7 +119,6 @@ strong {
 
 /* About page  */
 .about {
-  width: 80%;
   margin: 0 auto;
   padding: 10px;
 }
@@ -621,16 +620,8 @@ strong {
   .about-container {
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 80% !important;
+    /* width: 80% !important; */
     margin: 0 auto;
-  }
-
-  .main-pic {
-    /* width: 20%; */
-  }
-
-  .about {
-    /* width: 80%; */
   }
 
   /* .skills-pic img, .portfolio-pic img, .experience-pic img, .interests-pic img{
@@ -647,8 +638,13 @@ strong {
 }
 
 @media only screen and (min-width: 1200px) {
-  .main-pic img{
-    width: 80%;
+
+  .main-pic {
+    width: 30%;
+  }
+
+  .about {
+    width: 60%;
   }
 
   .exp-container {
