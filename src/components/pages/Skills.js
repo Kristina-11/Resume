@@ -10,7 +10,7 @@ const Skills = () => {
     const { lang } = useContext(LanguageContext);
     
     const [ techSkills ] = useState({
-        frontend: ['HTML5&CSS3', 'JavaScript', 'React.js'],
+        frontend: ['HTML5&CSS3', 'JavaScript (ES6)', 'React.js'],
         backend: ['C# - .NET, .NET Core'],
         servers: ['MSSQL Server', 'Firebase']
     });
