@@ -1,15 +1,24 @@
-import { motion } from "framer-motion";
+import { motion, useSpring } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { LanguageContext } from "../context/LanguageContext";
+import logo from "../img/code.png";
+import serbianFlag from "../img/serbia.png";
+import englandFlag from "../img/english.png";
 
 import dropdownImg from "../img/dropdown.png";
 
 const Nav = () => {
     const { lang, changeLanguage } = useContext(LanguageContext);
 
-    const [ dropdown, setDropdown ] = useState(false);
     const [ screen, setScreen ] = useState();
+    const [ flag, setFlag ] = useState(false);
+
+    // Mobile menu
+    const handleDropdown = (e) => {
+        const navbarMenu = document.querySelector('#nav-links');
+        navbarMenu.classList.toggle('is-active');
+    }
 
     const screenResolution = () => {
         let screenWidth = window.screen.width;
@@ -20,68 +29,70 @@ const Nav = () => {
         screenResolution();
     })
     
-    const handleDropdown = (e) => {
-        setDropdown(!dropdown);
-    }
-
+    // Language setting
     const handleLanguageChange = (e) => {
-        if (e.target.innerText === 'SR') {
-            changeLanguage('sr')
-            e.target.innerText = 'EN'
-        } else {
-            changeLanguage('en')
-            e.target.innerText = 'SR'
-        }
+        if (lang === 'en') {
+            changeLanguage('sr');
+            setFlag(true);
+         } else {
+            changeLanguage('en');
+            setFlag(false);
+         }
+        // if (e.target.innerText === 'SR') {
+        //     changeLanguage('sr')
+        //     e.target.innerText = 'EN'
+        //     console.log(e.target)
+        //     setFlag(true);
+        // } else {
+        //     changeLanguage('en')
+        //     e.target.innerText = 'SR'
+        //     console.log(e.target)
+        //     setFlag(false);
+        // }
     }
-
-    // Effect that tracks changes for dropdown menu
-    useEffect(() => {
-        const dropdownElement = document.querySelector('.nav-left');
-
-        if (dropdown) {
-            dropdownElement.classList.add('nav-show')
-            dropdownElement.classList.remove('nav-hide')
-        } else {
-            dropdownElement.classList.add('nav-hide')
-            dropdownElement.classList.remove('nav-show')
-        }
-
-        window.onclick = (e) => {
-            if (!e.target.matches('.nav-dropdown') && dropdown === true){
-                setDropdown(false)
-            }
-        }
-    },[dropdown])
 
     return ( 
-        <div className="nav">
-            <div className="nav-dropdown" onClick={handleDropdown}>
-                <img src={dropdownImg} alt="Dropdown menu" />
+        <div className="navbar is-light has-shadow">
+            <NavLink exact to='/'>
+                <img src={logo} alt='Sites logo' style={{maxHeight: '80px'}} />
+            </NavLink>
+
+            <div className="navbar-brand">
+                <a className="navbar-burger" id='burger' onClick={handleDropdown}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </div>
+
+            <motion.div className="navbar-menu has-text-centered nav-active" id="nav-links"
+            animate={ screen > 750 ?
+             { opacity: [ 0.5, 1], duration: 0.5 } : 
+             { }}>
             { lang === 'en' ? 
-                <motion.div className="nav-left nav-hide" animate={ screen > 750 ? { opacity: [ 0.5, 1], duration: 0.5 } : { }}>
-                    <NavLink exact to='/' activeClassName='focused'>About</NavLink>
-                    <NavLink to='/skills' activeClassName='focused'>Skills</NavLink>
-                    <NavLink to='/portfolio' activeClassName='focused'>Projects</NavLink>
-                    <NavLink to='/work' activeClassName='focused'>Experience&Education</NavLink>
-                    <NavLink to='/interests' activeClassName='focused'>Interests</NavLink>
-                </motion.div> : 
-                <motion.div className="nav-left nav-hide" animate={ screen > 750 ? { opacity: [ 0.5, 1], duration: 0.5 } : { }}>
-                    <NavLink exact to='/' activeClassName='focused'>Info</NavLink>
-                    <NavLink to='/skills' activeClassName='focused'>Veštine</NavLink>
-                    <NavLink to='/portfolio' activeClassName='focused'>Projekti</NavLink>
-                    <NavLink to='/work' activeClassName='focused'>Iskustvo&Edukacija</NavLink>
-                    <NavLink to='/interests' activeClassName='focused'>Interesovanja</NavLink>
-                </motion.div>
+                <div className="navbar-start is-size-5">
+                    <NavLink exact to='/' className='navbar-item' activeClassName='focused'>Home</NavLink>
+                    <NavLink to='/skills' className='navbar-item' activeClassName='focused'>Skills</NavLink>
+                    <NavLink to='/portfolio' className='navbar-item' activeClassName='focused'>Projects</NavLink>
+                    <NavLink to='/work' className='navbar-item' activeClassName='focused'>Experience&Education</NavLink>
+                    <NavLink to='/interests' className='navbar-item' activeClassName='focused'>Interests</NavLink>
+                </div>
+                 : 
+                 <div className="navbar-start is-size-5">
+                    <NavLink exact to='/' className='navbar-item' activeClassName='focused'>Home</NavLink>
+                    <NavLink to='/skills' className='navbar-item' activeClassName='focused'>Veštine</NavLink>
+                    <NavLink to='/portfolio' className='navbar-item' activeClassName='focused'>Projekti</NavLink>
+                    <NavLink to='/work' className='navbar-item' activeClassName='focused'>Iskustvo&Edukacija</NavLink>
+                    <NavLink to='/interests' className='navbar-item' activeClassName='focused'>Interesovanja</NavLink>
+                </div>
             }
-            
-            <div className="nav-right">
-                <ul>
-                    <motion.li className='active-lang' onClick={handleLanguageChange}
-                    whileTap={{ scale: 1.2, duration: 1.5 }}>
-                        SR
-                    </motion.li>
-                </ul>
+            </motion.div>
+
+            <div className="navbar-start is-clickable" onClick={handleLanguageChange}>
+                <motion.div className='navbar-item'
+                whileTap={{ scale: 1.2, duration: 1.5 }}>
+                    { flag ? <img src={englandFlag} /> : <img src={serbianFlag} /> }
+                </motion.div>
             </div>
         </div>
      );
