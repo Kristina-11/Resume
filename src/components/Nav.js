@@ -1,12 +1,10 @@
-import { motion, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { LanguageContext } from "../context/LanguageContext";
 import logo from "../img/code.png";
 import serbianFlag from "../img/serbia.png";
 import englandFlag from "../img/english.png";
-
-import dropdownImg from "../img/dropdown.png";
 
 const Nav = () => {
     const { lang, changeLanguage } = useContext(LanguageContext);
@@ -20,6 +18,7 @@ const Nav = () => {
         navbarMenu.classList.toggle('is-active');
     }
 
+    // Width of a screen
     const screenResolution = () => {
         let screenWidth = window.screen.width;
         setScreen(screenWidth)
@@ -38,26 +37,11 @@ const Nav = () => {
             changeLanguage('en');
             setFlag(false);
          }
-        // if (e.target.innerText === 'SR') {
-        //     changeLanguage('sr')
-        //     e.target.innerText = 'EN'
-        //     console.log(e.target)
-        //     setFlag(true);
-        // } else {
-        //     changeLanguage('en')
-        //     e.target.innerText = 'SR'
-        //     console.log(e.target)
-        //     setFlag(false);
-        // }
     }
 
     return ( 
-        <div className="navbar is-light has-shadow">
-            <NavLink exact to='/'>
-                <img src={logo} alt='Sites logo' style={{maxHeight: '80px'}} />
-            </NavLink>
-
-            <div className="navbar-brand">
+        <div className="nav navbar is-light has-shadow">
+            <div className="navbar-brand nav-icon">
                 <a className="navbar-burger" id='burger' onClick={handleDropdown}>
                     <span></span>
                     <span></span>
@@ -65,7 +49,7 @@ const Nav = () => {
                 </a>
             </div>
 
-            <motion.div className="navbar-menu has-text-centered nav-active" id="nav-links"
+            <motion.div className="navbar-menu nav-links nav-active" id="nav-links"
             animate={ screen > 750 ?
              { opacity: [ 0.5, 1], duration: 0.5 } : 
              { }}>
@@ -88,7 +72,7 @@ const Nav = () => {
             }
             </motion.div>
 
-            <div className="navbar-start is-clickable" onClick={handleLanguageChange}>
+            <div className="navbar-end is-clickable nav-flag" onClick={handleLanguageChange}>
                 <motion.div className='navbar-item'
                 whileTap={{ scale: 1.2, duration: 1.5 }}>
                     { flag ? <img src={englandFlag} /> : <img src={serbianFlag} /> }

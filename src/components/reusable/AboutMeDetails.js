@@ -11,39 +11,43 @@ const AboutMeDetails = ({ about }) => {
     const keywordsList = about.keywords;
 
     return (
-        <motion.div className="about" initial={{opacity: 0}} animate={{opacity: 1}}>
-            <div className="intro">
+        <motion.div className="about p-2 has-text-centered-tablet has-text-centered-mobile"
+        initial={{opacity: 0}} 
+        animate={{opacity: 1}}>
+            <div className="">
                 <motion.h1 
+                className='is-size-1-tablet is-size-2-touch'
                 initial="hidden" 
                 animate="visible" 
                 variants={NameVariants}>
                     { about.name }
                 </motion.h1>
                 <motion.h2
+                className='is-size-4-tablet is-size-5-touch'
                 initial="hidden" 
                 animate="visible" 
                 variants={PositionVariants}>
                     { about.position }
                 </motion.h2>
-                <span>
-                    <ul>
+                <span className='key-words'>
+                    <ul className='is-inline p-2'>
                         { keywordsList.map((keyword) => {
                             return (
-                                <li key={Math.random() * 10}>{ keyword }</li>
+                                <li className='is-inline pr-3 is-block-tablet is-size-5' key={Math.random() * 10}>{ keyword }</li>
                             )
                         }) }
                     </ul>
                 </span>
             </div>
-            <div className="summary">
+            <div className="summary is-size-5 pt-5 pb-5">
                 { about.summary }
             </div>
-            <div className="links">
-                <div className="links-text">
+            <div className="links has-text-centered">
+                <div className="p-4">
                     { about.text } <br/>
                     <strong>{ about.email }</strong>
                 </div>
-                <div className="email">
+                <div className="is-inline">
                     <a href='kristina.jovanovic.code@gmail.com' onClick={(e) => {
                         e.preventDefault()
                         window.open('mailto:kristina.jovanovic.code@gmail.com')
@@ -51,19 +55,17 @@ const AboutMeDetails = ({ about }) => {
                         <img src={email} alt='email icon' />
                     </a>
                 </div>
-                <div className="linked-in">
+                <div className="is-inline">
                     <a href='https://www.linkedin.com/in/kristina91jovanovic11'>
                         <img src={linkedIn} alt='linkedIn icon' />
                     </a>
-                    {/* <span>www.linkedin.com/in/kristina91jovanovic11</span> */}
                 </div>
-                <div className="github">
+                <div className="is-inline">
                     <a href='https://github.com/Kristina-11/'>
                         <img src={github} alt='github icon' />
                     </a> 
-                    {/* <span>https://github.com/Kristina-11/</span> */}
                 </div>
-                <div className="resume">
+                <div className="has-text-centered">
                     { about.id === 1 ? 
                         <a href={resumeEn} target="_blank">Resume</a> 
                         :

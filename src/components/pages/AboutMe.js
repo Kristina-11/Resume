@@ -1,14 +1,19 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
+import { motion } from 'framer-motion';
 import { LanguageContext } from '../../context/LanguageContext';
+import AboutMeDetails from '../reusable/AboutMeDetails';
+import { containerVariants } from "../Variants";
+
 import src from '../../img/about.jpg';
 import srcFull from '../../img/about-full.jpg';
-import Picture from '../reusable/Picture';
-import AboutMeDetails from '../reusable/AboutMeDetails';
-import { animate, AnimatePresence, motion } from 'framer-motion';
-import { containerVariants } from "../Variants";
 
 const AboutMe = () => { 
     const { lang } = useContext(LanguageContext);
+
+    const screenWidth = () => {
+      let screenWidth = window.screen.width;
+      return screenWidth;
+    }
     
     const [ about ] = useState({
         id: 1,
@@ -30,25 +35,29 @@ const AboutMe = () => {
         email: 'kristina.jovanovic.code@gmail.com',
     });
 
-    const screenResolution = () => {
-        let screenWidth = window.screen.width;
-        return screenWidth;
-    }
-
     return (
-        <motion.div className="container about-container"
-        variants={containerVariants} exit={{ x: '-200vw', transition: { duration: 3 } }}>
-            { screenResolution() > 1000 ? 
-                <Picture src={srcFull} text='about' from='main' /> : 
-                <Picture src={src} text='about' from='main' />
-            }
+      <motion.div className="is-widescreen is-fluid"
+      variants={containerVariants} 
+      initial="hidden"
+      animate="visible">
+        <div className="main height-container p-1">
+          <div className="main-picture-div">
+          {
+            screenWidth() <= 1023 ? 
+            <img src={src} className='main-picture' /> : 
+            <img src={srcFull} className='main-picture' /> 
+          }
+          </div>
+          <div className="main-text">
             { lang === 'en' ? 
-                <AboutMeDetails about={about} />
-                : 
-                <AboutMeDetails about={aboutSr} />
+              <AboutMeDetails about={about} />
+              : 
+              <AboutMeDetails about={aboutSr} />
             }
-        </motion.div>
-     );
+          </div>
+        </div>
+      </motion.div>
+    );
 }
  
 export default AboutMe;
