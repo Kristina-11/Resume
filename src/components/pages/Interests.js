@@ -39,14 +39,13 @@ const Interests = () => {
     }, [clicked])
 
     return ( 
-        <motion.div className="container interests-container" variants={containerVariants}
+        <motion.div className="interests-container" variants={containerVariants}
         initial="hidden"
-        animate="visible"
-        exit="exit">
+        animate="visible">
             {
                 lang === 'en' ?
-                <InterestsDetails interests={interests} /> :
-                <InterestsDetails interests={interesovanja} />
+                <h1 className='is-size-1 has-text-centered'>This page is under construction my curios friend :)</h1> :
+                <h1 className='is-size-1 has-text-centered'>Strana u pripremi :)</h1>
             }
         </motion.div>
      );

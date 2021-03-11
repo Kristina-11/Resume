@@ -59,7 +59,7 @@ const Nav = () => {
                     <NavLink to='/skills' className='navbar-item' activeClassName='focused'>Skills</NavLink>
                     <NavLink to='/portfolio' className='navbar-item' activeClassName='focused'>Projects</NavLink>
                     <NavLink to='/work' className='navbar-item' activeClassName='focused'>Experience&Education</NavLink>
-                    <NavLink to='/interests' className='navbar-item' activeClassName='focused'>Interests</NavLink>
+                    {/* <NavLink to='/interests' className='navbar-item' activeClassName='focused'>Interests</NavLink> */}
                 </div>
                  : 
                  <div className="navbar-start is-size-5">
@@ -67,7 +67,7 @@ const Nav = () => {
                     <NavLink to='/skills' className='navbar-item' activeClassName='focused'>Veštine</NavLink>
                     <NavLink to='/portfolio' className='navbar-item' activeClassName='focused'>Projekti</NavLink>
                     <NavLink to='/work' className='navbar-item' activeClassName='focused'>Iskustvo&Edukacija</NavLink>
-                    <NavLink to='/interests' className='navbar-item' activeClassName='focused'>Interesovanja</NavLink>
+                    {/* <NavLink to='/interests' className='navbar-item' activeClassName='focused'>Interesovanja</NavLink> */}
                 </div>
             }
             </motion.div>

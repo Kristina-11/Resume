@@ -1,8 +1,6 @@
 import { useContext, useState } from "react";
 import { motion } from "framer-motion";
-import Picture from "../reusable/Picture";
 import SkillsList from "../reusable/SkillsList";
-import src from '../../img/skills.jpg';
 import { LanguageContext } from "../../context/LanguageContext";
 import { containerVariants } from "../Variants";
 

@@ -1,10 +1,8 @@
-import Picture from "../reusable/Picture";
-import src from '../../img/work.jpg';
 import { useContext, useState } from "react";
+import { motion } from "framer-motion";
 import { LanguageContext } from "../../context/LanguageContext";
 import WorkDetails from "../reusable/WorkDetails";
 import { containerVariants } from "../Variants";
-import { motion } from "framer-motion";
 
 const Experience = () => {
     const { lang } = useContext(LanguageContext);
@@ -82,11 +80,9 @@ const Experience = () => {
     });
 
     return ( 
-        <motion.div className="container exp-container" variants={containerVariants}
+        <motion.div className="exp-container" variants={containerVariants}
             initial="hidden"
-            animate="visible"
-            exit="exit">
-            <Picture src={src} text='experience' from='experience'/>
+            animate="visible">
             {
                 lang === 'en' ? 
                 <WorkDetails props={experience} /> :
