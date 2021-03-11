@@ -14,7 +14,7 @@ export const containerVariants = {
         }
     },
     exit: {
-        x: '-200vw',
+        x: '200vw',
         transition: {
             duration: 1
         }
