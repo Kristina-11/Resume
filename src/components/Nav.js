@@ -2,21 +2,36 @@ import { motion } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { LanguageContext } from "../context/LanguageContext";
-import logo from "../img/code.png";
 import serbianFlag from "../img/serbia.png";
 import englandFlag from "../img/english.png";
 
 const Nav = () => {
     const { lang, changeLanguage } = useContext(LanguageContext);
 
+    const [ dropdown, setDropdown ] = useState(false);
     const [ screen, setScreen ] = useState();
     const [ flag, setFlag ] = useState(false);
 
     // Mobile menu
     const handleDropdown = (e) => {
-        const navbarMenu = document.querySelector('#nav-links');
-        navbarMenu.classList.toggle('is-active');
+      const navbarMenu = document.querySelector('#nav-links');
+      navbarMenu.classList.toggle('is-active');
+      
+      navbarMenu.matches('.is-active') ? 
+      setDropdown(true) : 
+      setDropdown(false)
     }
+
+    // Closing dropdown menu
+    useEffect(() => {
+      window.onclick = (e) => {
+        const navbarMenu = document.querySelector('#nav-links');
+        if (!e.target.matches('#nav-links') && dropdown === true){
+          setDropdown(false);
+          navbarMenu.classList.toggle('is-active');
+        }
+      }
+    }, [dropdown])
 
     // Width of a screen
     const screenResolution = () => {
