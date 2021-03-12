@@ -368,6 +368,8 @@ span {
   }
 
   .exp-container, .skill-container {
-    height: auto;
+    height: 100%;
+    margin: 0 auto;
+    background-image: none;
   }
 }
