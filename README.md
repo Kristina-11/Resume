@@ -3,6 +3,9 @@
 ![](https://img.shields.io/badge/-HTML5%26CSS3-blue)
 ![](https://img.shields.io/badge/-React.js-brightgreen)
 ![](https://img.shields.io/badge/-FramerMotion-blueviolet)
+![](https://img.shields.io/badge/-Bulma-orange)
+
+[![time tracker](https://wakatime.com/badge/github/Kristina-11/Resume.svg)](https://wakatime.com/badge/github/Kristina-11/Resume)
 
 # Site punlished at: https://kristina-11.github.io/Resume/
 
