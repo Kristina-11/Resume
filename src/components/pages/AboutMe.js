@@ -36,7 +36,7 @@ const AboutMe = () => {
     });
 
     return (
-      <motion.div className="is-widescreen is-fluid"
+      <motion.div className="main-container is-widescreen is-fluid"
       variants={containerVariants} 
       initial="hidden"
       animate="visible">
