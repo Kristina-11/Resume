@@ -28,7 +28,7 @@ const Experience = () => {
             detailsList: ['Worked on developing apps for solving business problems. In order for customers to understand, gather, organize and optimize their data.', 'Worked with JavaScript, JQuery, Ajax, .NET MVC, .NET Core, LINQ, SQL.', 'Applied agile methods with SCRUM for keeping track of a progress', 'Used Jira and Bitbucket for remote work and task tracking']
         }],
         education: [{
-            facility: 'ICT COLLAGE OF APPLIED STUDIES',
+            facility: 'ICT COLLEGE OF APPLIED STUDIES',
             course: 'Internet Technologies',
             years: '2016'
         }, {

@@ -2,8 +2,7 @@ import React from 'react'
 import email from '../../img/email.png';
 import linkedIn from '../../img/linedin.png';
 import github from '../../img/github.png';
-import resumeEn from '../../pdf/Resume.pdf';
-import resumeSr from '../../pdf/ResumeSr.pdf';
+import resume from '../../pdf/Resume.pdf';
 import { motion } from 'framer-motion';
 import { NameVariants, PositionVariants } from '../Variants';
 
@@ -66,11 +65,8 @@ const AboutMeDetails = ({ about }) => {
                     </a> 
                 </div>
                 <div className="has-text-centered">
-                    { about.id === 1 ? 
-                        <a href={resumeEn} target="_blank">Resume</a> 
-                        :
-                        <a href={resumeSr} target="_blank">Resume</a> 
-                    } (PDF)
+                  <a href={resume} target="_blank">Resume</a> 
+                  (PDF)
                 </div>
             </div>
         </motion.div>
