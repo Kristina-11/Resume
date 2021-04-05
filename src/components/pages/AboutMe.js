@@ -42,11 +42,12 @@ const AboutMe = () => {
       animate="visible">
         <div className="main height-container p-1">
           <div className="main-picture-div">
-          {
+            <img src={src} className='main-picture' />
+          {/* {
             screenWidth() <= 1023 ? 
             <img src={src} className='main-picture' /> : 
             <img src={srcFull} className='main-picture' /> 
-          }
+          } */}
           </div>
           <div className="main-text">
             { lang === 'en' ? 

@@ -13,7 +13,7 @@ const AboutMeDetails = ({ about }) => {
         <motion.div className="about p-2 has-text-centered-tablet has-text-centered-mobile"
         initial={{opacity: 0}} 
         animate={{opacity: 1}}>
-            <div className="">
+            <div className="short-info">
                 <motion.h1 
                 className='is-size-1-tablet is-size-2-touch'
                 initial="hidden" 
