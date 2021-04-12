@@ -341,9 +341,9 @@ span {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
   .main-container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
 
