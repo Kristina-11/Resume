@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Resume/static/css/main.61e308c8.chunk.css",
-    "main.js": "/Resume/static/js/main.e0cf5dfc.chunk.js",
-    "main.js.map": "/Resume/static/js/main.e0cf5dfc.chunk.js.map",
+    "main.js": "/Resume/static/js/main.655ceb0d.chunk.js",
+    "main.js.map": "/Resume/static/js/main.655ceb0d.chunk.js.map",
     "runtime-main.js": "/Resume/static/js/runtime-main.0ea887d6.js",
     "runtime-main.js.map": "/Resume/static/js/runtime-main.0ea887d6.js.map",
     "static/css/2.49be9a4e.chunk.css": "/Resume/static/css/2.49be9a4e.chunk.css",
@@ -18,6 +18,7 @@
     "static/media/blog.06d7f0d6.PNG": "/Resume/static/media/blog.06d7f0d6.PNG",
     "static/media/calculator.9fc6cc80.PNG": "/Resume/static/media/calculator.9fc6cc80.PNG",
     "static/media/dimitrijala.35593655.PNG": "/Resume/static/media/dimitrijala.35593655.PNG",
+    "static/media/dream.eb510052.PNG": "/Resume/static/media/dream.eb510052.PNG",
     "static/media/email.ca7e0a05.png": "/Resume/static/media/email.ca7e0a05.png",
     "static/media/english.320bf846.png": "/Resume/static/media/english.320bf846.png",
     "static/media/game-rps.50ab3f32.PNG": "/Resume/static/media/game-rps.50ab3f32.PNG",
@@ -37,6 +38,6 @@
     "static/css/2.49be9a4e.chunk.css",
     "static/js/2.4fd56c97.chunk.js",
     "static/css/main.61e308c8.chunk.css",
-    "static/js/main.e0cf5dfc.chunk.js"
+    "static/js/main.655ceb0d.chunk.js"
   ]
 }
