@@ -10,6 +10,7 @@ import calculator from '../../img/projects/calculator.PNG';
 import gameRPS from '../../img/projects/game-rps.PNG';
 import planets from '../../img/projects/planets.PNG';
 import rent from '../../img/projects/rent.PNG';
+import dream from '../../img/projects/dream.PNG';
 
 const ProjectDetails = ({ info }) => {
     const [ pic, setPic ] = useState('');
@@ -50,6 +51,10 @@ const ProjectDetails = ({ info }) => {
 
             case 'rent':
                 setPic(rent);
+                break;
+
+            case 'dream':
+                setPic(dream);
                 break;
         }
     }, [info])

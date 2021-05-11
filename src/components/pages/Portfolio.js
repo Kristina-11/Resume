@@ -10,13 +10,12 @@ const Portfolio = () => {
 
     const [ links ] = useState([
         // {title: 'Inspirational Blog', name: 'blog', details: 'C# - .NET Core', link: 'http://kristina91119-001-site1.itempurl.com/', more: 'admin, password & testing@test, testing' },
+        {title: 'Dream Journal', name: 'dream', details: 'React, Redux, TypeScript & SCSS', link: 'https://kristina-11.github.io/DreamJournal/', more: ''},
         {title: 'Rent A Car', name: 'rent', details: 'React.js & Firebase', link: 'https://kristina-11.github.io/RentACar/', more: 'admin@test.com, test12345'},
         {title: 'Project Managment', name: 'managment', details: 'React.js, Redux & Firebase', link: 'https://projectmanagment-28660.web.app/', more: 'kakashi@test.com, testing12345'},
         {title: 'Weather App', name: 'weather', details: 'React.js & WeatherApp API', link: 'https://kristina-11.github.io/WeatherApp/', more: 'Made with React and APIs :D'},
-        {title: 'Library App', name: 'library', details: 'Vanilla JavaScript + LocalStorage', link: 'https://kristina-11.github.io/Library/', more: ''},
         {title: 'Planets', name: 'planets', details: 'Vanilla JavaScript', link: 'https://kristina-11.github.io/WeightInUniverse/', more: ''},
         {title: 'Rock Paper Scissors', name: 'gameRPS', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Rock-Paper-Scissors/', more: ''},
-        {title: 'Calculator', name: 'calculator', details: 'Vanilla JavaScript + Grid', link: 'https://kristina-11.github.io/Calculator/', more: ''},
         {title: 'Apartments Info Page', name: 'dimitrijala', details: 'CMS - Google Sites', link: 'https://www.dimitrijatucovica30.co.rs/', more: ''},
     ]);
 
